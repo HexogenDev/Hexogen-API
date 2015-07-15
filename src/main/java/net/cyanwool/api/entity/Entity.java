@@ -4,8 +4,6 @@ import java.util.List;
 
 import net.cyanwool.api.Server;
 import net.cyanwool.api.entity.controllers.EntityController;
-import net.cyanwool.api.entity.controllers.EntityJumpController;
-import net.cyanwool.api.entity.controllers.EntityLookController;
 import net.cyanwool.api.entity.controllers.EntityMoveController;
 import net.cyanwool.api.utils.Rotation;
 import net.cyanwool.api.world.Position;
@@ -56,30 +54,22 @@ public interface Entity {
 
 	public Server getServer();
 
-	public Rotation getHeadRotation();
-	
-	public void setHeadRotation(Rotation rotation);
-	
 	public Rotation getBodyRotation();
-	
+
 	public void setBodyRotation(Rotation rotation);
-	
+
 	public List<EntityController> getEntityControllers();
-	
+
 	public EntityController getEntityController(String name);
 
 	public void addEntityController(EntityController controller);
-	
+
 	public void removeEntityController(EntityController controller);
-	
+
 	public void removeEntityController(String name);
-	
-	public EntityLookController getLookController();
-	
+
 	public EntityMoveController getMoveController();
-	
-	public EntityJumpController getJumpController();
-	
+
 	// NBT
 	// public void loadCompoundTag(CompoundTag tag);
 

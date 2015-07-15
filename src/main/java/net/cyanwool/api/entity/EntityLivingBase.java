@@ -1,6 +1,9 @@
 package net.cyanwool.api.entity;
 
+import net.cyanwool.api.entity.controllers.EntityJumpController;
+import net.cyanwool.api.entity.controllers.EntityLookController;
 import net.cyanwool.api.utils.DamageSource;
+import net.cyanwool.api.utils.Rotation;
 import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.sounds.Sound;
 
@@ -11,6 +14,10 @@ public interface EntityLivingBase extends Entity {
 	public float getEyeHeight();
 
 	public Position getEyePosition();
+
+	public Rotation getHeadRotation();
+
+	public void setHeadRotation(Rotation rotation);
 
 	public void damage(float amount, DamageSource source);
 
@@ -60,7 +67,13 @@ public interface EntityLivingBase extends Entity {
 
 	public void kill();
 
-	public void kill(Entity entity, DamageSource source);
+	public void kill(DamageSource source);
+
+	public void kill(Entity entity);
+
+	public EntityJumpController getJumpController();
+
+	public EntityLookController getLookController();
 
 	// Events...
 	public void onDamageEntity(Entity damager, float damage);
@@ -72,4 +85,5 @@ public interface EntityLivingBase extends Entity {
 	public void onWalkingEntity();
 
 	public void onInteractEntity(EntityLivingBase interacter);
+
 }
