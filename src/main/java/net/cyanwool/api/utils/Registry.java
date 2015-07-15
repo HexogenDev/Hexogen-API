@@ -1,5 +1,6 @@
-package net.cyanwool.api.material;
+package net.cyanwool.api.utils;
 
+import net.cyanwool.api.material.Material;
 import net.cyanwool.api.plugins.Plugin;
 
 public interface Registry {
@@ -10,13 +11,13 @@ public interface Registry {
 
 	public Material getMaterialFromId(String prefix, int id);
 
-	public Material getMaterialFromId(String prefix, String id);
-
 	public Material getMaterialFromId(String prefix, int id, int metadata);
 
-	public Material getMaterialFromId(String prefix, String id, int metadata);
-
 	public Material getMaterialFromId(String prefix, int id, int metadata, int customData);
+
+	public Material getMaterialFromId(String prefix, String id);
+
+	public Material getMaterialFromId(String prefix, String id, int metadata);
 
 	public Material getMaterialFromId(String prefix, String id, int metadata, int customData);
 
