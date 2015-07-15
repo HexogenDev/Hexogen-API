@@ -1,5 +1,7 @@
 package net.cyanwool.api.entity;
 
-public enum EntityType {
+public interface EntityType {
+
+	public int getId();
 
 }
