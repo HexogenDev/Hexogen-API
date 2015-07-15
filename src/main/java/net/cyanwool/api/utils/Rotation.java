@@ -1,17 +1,17 @@
 package net.cyanwool.api.utils;
 
 public class Rotation {
-	
+
 	private float yaw;
 	private float pitch;
-	private float roll; //???
-	
-	public Rotation(float yaw, float pitch, float roll){
+	private float roll; // ???
+
+	public Rotation(float yaw, float pitch, float roll) {
 		this.setYaw(yaw);
 		this.setPitch(pitch);
 		this.setRoll(roll);
 	}
-	
+
 	public Rotation(float yaw, float pitch) {
 		this(yaw, pitch, 0);
 	}
@@ -39,5 +39,5 @@ public class Rotation {
 	public void setRoll(float roll) {
 		this.roll = roll;
 	}
-	
+
 }
