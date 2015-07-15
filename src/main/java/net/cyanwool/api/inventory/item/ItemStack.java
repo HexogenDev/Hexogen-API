@@ -1,6 +1,6 @@
 package net.cyanwool.api.inventory.item;
 
-import net.cyanwool.api.material3.items.ItemMaterial;
+import net.cyanwool.api.material.items.ItemMaterial;
 
 public class ItemStack {
 

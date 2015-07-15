@@ -1,4 +1,4 @@
-package net.cyanwool.api.material3.texture;
+package net.cyanwool.api.material.texture;
 
 public interface IMaterialTextures {
 

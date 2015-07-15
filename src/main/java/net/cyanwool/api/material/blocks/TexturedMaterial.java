@@ -1,8 +1,8 @@
-package net.cyanwool.api.material3.blocks;
+package net.cyanwool.api.material.blocks;
 
-import net.cyanwool.api.material3.Material;
-import net.cyanwool.api.material3.texture.IMaterialTextures;
-import net.cyanwool.api.material3.texture.ITextured;
+import net.cyanwool.api.material.Material;
+import net.cyanwool.api.material.texture.IMaterialTextures;
+import net.cyanwool.api.material.texture.ITextured;
 
 public class TexturedMaterial extends BlockMaterial implements ITextured {
 

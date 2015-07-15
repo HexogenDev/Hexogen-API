@@ -8,7 +8,7 @@ import net.cyanwool.api.entity.Entity;
 import net.cyanwool.api.entity.EntityLivingBase;
 import net.cyanwool.api.entity.EntityType;
 import net.cyanwool.api.entity.alive.player.Player;
-import net.cyanwool.api.material3.blocks.BlockMaterial;
+import net.cyanwool.api.material.blocks.BlockMaterial;
 import net.cyanwool.api.world.chunk.ChunkManager;
 import net.cyanwool.api.world.effect.Effect;
 import net.cyanwool.api.world.sounds.Sound;

@@ -1,4 +1,4 @@
-package net.cyanwool.api.material3;
+package net.cyanwool.api.material;
 
 import net.cyanwool.api.plugins.Plugin;
 

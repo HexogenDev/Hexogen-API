@@ -1,6 +1,6 @@
-package net.cyanwool.api.material3.texture;
+package net.cyanwool.api.material.texture;
 
-import net.cyanwool.api.material3.Material;
+import net.cyanwool.api.material.Material;
 
 public interface ITextured {
 

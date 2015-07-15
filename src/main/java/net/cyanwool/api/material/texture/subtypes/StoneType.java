@@ -1,14 +1,14 @@
-package net.cyanwool.api.material3.texture.subtypes;
+package net.cyanwool.api.material.texture.subtypes;
 
-import net.cyanwool.api.material3.texture.IMaterialTextures;
+import net.cyanwool.api.material.texture.IMaterialTextures;
 
-public enum DirtType implements IMaterialTextures {
-	DIRT("dirt", 0), COARSE_DIRT("coarse_dirt", 1), PODZOL("podzol", 2);
+public enum StoneType implements IMaterialTextures {
+	STONE("stone", 0), GRANITE("granite", 1), GRANITE_SMOOTH("granite_smooth", 2), DIORITE("diorite", 3), DIORITE_SMOOTH("diorite_smooth", 4), ANDESITE("andesite", 5), ANDESITE_SMOOTH("andesite_smooth", 6);
 
 	private String sid;
 	private int metadata;
 
-	private DirtType(String stringId, int metadata) {
+	private StoneType(String stringId, int metadata) {
 		this.sid = stringId;
 		this.metadata = metadata;
 	}
@@ -30,7 +30,7 @@ public enum DirtType implements IMaterialTextures {
 				return texture;
 			}
 		}
-		return DIRT;
+		return STONE;
 	}
 
 	@Override
@@ -40,6 +40,6 @@ public enum DirtType implements IMaterialTextures {
 				return texture;
 			}
 		}
-		return DIRT;
+		return STONE;
 	}
 }

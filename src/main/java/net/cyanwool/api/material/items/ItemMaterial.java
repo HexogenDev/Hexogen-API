@@ -1,10 +1,10 @@
-package net.cyanwool.api.material3.items;
+package net.cyanwool.api.material.items;
 
 import net.cyanwool.api.block.Block;
 import net.cyanwool.api.entity.EntityLivingBase;
 import net.cyanwool.api.entity.alive.player.Player;
 import net.cyanwool.api.inventory.item.ItemStack;
-import net.cyanwool.api.material3.Material;
+import net.cyanwool.api.material.Material;
 import net.cyanwool.api.utils.BlockSide;
 import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;

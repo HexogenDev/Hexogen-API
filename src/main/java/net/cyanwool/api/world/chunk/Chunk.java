@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.cyanwool.api.block.Block;
 import net.cyanwool.api.entity.Entity;
-import net.cyanwool.api.material3.blocks.BlockMaterial;
+import net.cyanwool.api.material.blocks.BlockMaterial;
 import net.cyanwool.api.world.LightType;
 import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;

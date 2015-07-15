@@ -1,7 +1,7 @@
-package net.cyanwool.api.material3;
+package net.cyanwool.api.material;
 
 import net.cyanwool.api.CyanWool;
-import net.cyanwool.api.material3.items.ToolItemMaterial;
+import net.cyanwool.api.material.items.ToolItemMaterial;
 
 public class Material implements Cloneable {
 

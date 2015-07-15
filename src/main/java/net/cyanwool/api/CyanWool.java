@@ -10,7 +10,7 @@ import net.cyanwool.api.lang.LanguageManager;
 import net.cyanwool.api.management.OperatorsManager;
 import net.cyanwool.api.management.PlayerManager;
 import net.cyanwool.api.management.WhitelistManager;
-import net.cyanwool.api.material3.Registry;
+import net.cyanwool.api.material.Registry;
 import net.cyanwool.api.network.NetworkServer;
 import net.cyanwool.api.packs.ServerPack;
 import net.cyanwool.api.plugins.PluginManager;

@@ -1,6 +1,6 @@
-package net.cyanwool.api.material3.blocks;
+package net.cyanwool.api.material.blocks;
 
-import net.cyanwool.api.material3.Material;
+import net.cyanwool.api.material.Material;
 import net.cyanwool.api.world.sounds.GeneralSounds;
 
 public class MaterialStone extends TexturedMaterial {
