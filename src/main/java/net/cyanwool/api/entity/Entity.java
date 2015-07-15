@@ -1,6 +1,7 @@
 package net.cyanwool.api.entity;
 
 import net.cyanwool.api.Server;
+import net.cyanwool.api.utils.Rotation;
 import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;
 import net.cyanwool.api.world.chunk.Chunk;
@@ -31,7 +32,7 @@ public interface Entity {
 
 	public void setFireTicks(int ticks);
 
-	// maybe add entity type ?
+	public EntityType getEntityType();
 
 	public int getLivedTicks();
 
@@ -49,16 +50,13 @@ public interface Entity {
 
 	public Server getServer();
 
-	// Body
-	public float getRotationYaw();
-
-	public float getRotationPitch();
-
-	public void setRotationYaw(float yaw);
-
-	public void setRotationPitch(float pitch);
-
-	public void moveEntity(double x, double y, double z);
+	public Rotation getHeadRotation();
+	
+	public void setHeadRotation(Rotation rotation);
+	
+	public Rotation getBodyRotation();
+	
+	public void setBodyRotation(Rotation rotation);
 
 	// NBT
 	// public void loadCompoundTag(CompoundTag tag);

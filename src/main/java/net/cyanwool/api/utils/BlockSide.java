@@ -23,7 +23,7 @@ public enum BlockSide {
 	 * @return the direction the entity is facing as CW 0 (west) to 3 (south)
 	 */
 	public static int getLookDirection(final EntityLivingBase entity) {
-		return (int) Math.floor(((entity.getRotationYaw() + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
+		return (int) Math.floor(((entity.getHeadRotation().getYaw() + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
 		// is
 		// -180°
 		// (north)
@@ -46,7 +46,7 @@ public enum BlockSide {
 	 * @return the direction that is facing the entity as CW 0 (west) to 3 (south)
 	 */
 	public static int getDirectionFacing(final EntityLivingBase entity) {
-		return (int) Math.floor(((entity.getRotationYaw() + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
+		return (int) Math.floor(((entity.getHeadRotation().getYaw() + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
 		// is
 		// -180°
 		// (north)
