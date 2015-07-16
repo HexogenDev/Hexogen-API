@@ -6,6 +6,7 @@ import net.cyanwool.api.world.Position;
 
 public interface Human extends EntityLivingBase {
 
+	@Override
 	public String getName();
 
 	public boolean isSleeping();

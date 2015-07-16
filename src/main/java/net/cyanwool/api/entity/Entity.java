@@ -4,7 +4,6 @@ import net.cyanwool.api.Server;
 import net.cyanwool.api.command.ICommandSender;
 import net.cyanwool.api.entity.component.ComponentManager;
 import net.cyanwool.api.entity.types.EntityType;
-import net.cyanwool.api.utils.DamageSource;
 import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;
 import net.cyanwool.api.world.chunk.Chunk;
@@ -39,6 +38,7 @@ public interface Entity extends ICommandSender {
 
 	public boolean canSeePosition(Position pos);
 
+	@Override
 	public Server getServer();
 
 	public ComponentManager getComponentManager();

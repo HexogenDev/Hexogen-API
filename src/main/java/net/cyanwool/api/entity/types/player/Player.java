@@ -57,6 +57,7 @@ public interface Player extends Human {
 
 	public boolean isOnline();
 
+	@Override
 	public boolean canSeeEntity(Entity entity);
 
 	public boolean canSeeChunk(Chunk chunk);
