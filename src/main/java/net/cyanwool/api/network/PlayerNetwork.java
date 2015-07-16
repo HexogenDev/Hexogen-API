@@ -1,7 +1,7 @@
 package net.cyanwool.api.network;
 
 import net.cyanwool.api.Server;
-import net.cyanwool.api.entity.alive.player.Player;
+import net.cyanwool.api.entity.types.player.Player;
 
 public interface PlayerNetwork {
 

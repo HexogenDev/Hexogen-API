@@ -1,7 +1,7 @@
 package net.cyanwool.api.material.items;
 
 import net.cyanwool.api.entity.EntityLivingBase;
-import net.cyanwool.api.entity.alive.player.Player;
+import net.cyanwool.api.entity.types.player.Player;
 import net.cyanwool.api.inventory.item.ItemStack;
 import net.cyanwool.api.material.Material;
 import net.cyanwool.api.utils.BlockSide;
