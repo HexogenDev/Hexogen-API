@@ -18,9 +18,9 @@ public interface ServerConfiguration {
 
 	public void setMotd(String motd);
 
-	public int getViewDistance();
+	public int getRadiusViewDistance();
 
-	public void setViewDistance(int view);
+	public void setRadiusViewDistance(int view);
 
 	public int getMaxIterationsIO();
 

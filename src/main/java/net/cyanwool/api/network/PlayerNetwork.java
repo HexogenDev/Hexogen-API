@@ -7,7 +7,7 @@ public interface PlayerNetwork {
 
 	public Player getPlayer();
 
-	// public void sendPacket(Packet packet);
+	public void sendPacket(Packet packet);
 
 	// public void addListener(SessionListener listener);
 
