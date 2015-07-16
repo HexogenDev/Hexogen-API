@@ -6,7 +6,7 @@ public interface Component {
 
 	public void initialization();
 
-	public void isNeedUpdate();
+	public boolean isNeedUpdate();
 
 	public void update();
 
