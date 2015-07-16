@@ -2,7 +2,7 @@ package net.cyanwool.api.entity2.component.living;
 
 import net.cyanwool.api.entity2.component.Component;
 
-public interface Regeration extends Component{
+public interface Regeration extends Component {
 
 	public int getRegenerationSpeedTicks();
 

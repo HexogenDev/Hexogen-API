@@ -31,4 +31,9 @@ public class ConsoleCommandSender implements ICommandSender {
 	public String getLangCode() {
 		return "en_US";
 	}
+
+	@Override
+	public void executeCommand(String commandName) {
+		getServer().getCommandManager().dispatchCommand(this, commandName);
+	}
 }

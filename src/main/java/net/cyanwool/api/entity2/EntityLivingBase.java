@@ -30,9 +30,9 @@ public interface EntityLivingBase extends Entity {
 
 	public void interact(EntityLivingBase entity);
 
-	//public EntityJumpController getJumpController();
+	// public EntityJumpController getJumpController();
 
-	//public EntityLookController getLookController();
+	// public EntityLookController getLookController();
 
 	// Events...
 	public void onDamageEntity(Entity damager, float damage);

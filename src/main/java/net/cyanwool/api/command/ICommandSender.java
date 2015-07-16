@@ -13,4 +13,6 @@ public interface ICommandSender {
 	public boolean isPlayer();
 
 	public String getLangCode();
+
+	public void executeCommand(String commandName);
 }

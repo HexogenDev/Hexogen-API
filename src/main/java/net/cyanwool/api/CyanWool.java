@@ -41,6 +41,7 @@ public class CyanWool {
 		getServer().getLogger().info("Host Address: " + getServer().getNetworkServer().getHostAddress());
 		getServer().getLogger().info("Port: " + getServer().getNetworkServer().getPort());
 		getServer().getLogger().info("Minecraft Version: " + getServer().getMCVersion());
+		getServer().start();
 	}
 
 	/**
