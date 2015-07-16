@@ -23,5 +23,4 @@ public interface EntityType {
 	public void onWalkingEntity(Entity entity);
 
 	public void onInteractEntity(Entity entity, EntityLivingBase interacter);
-
 }

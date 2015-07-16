@@ -42,8 +42,4 @@ public interface Entity extends ICommandSender {
 	public Server getServer();
 
 	public ComponentManager getComponentManager();
-
-	public void onDeathEntity(DamageSource source);
-
-	public void onDeathEntityByEntity(Entity entity);
 }
