@@ -1,7 +1,6 @@
 package net.cyanwool.api.entity.types;
 
 import net.cyanwool.api.entity.BaseEntity;
-import net.cyanwool.api.entity.EntityLivingBase;
 import net.cyanwool.api.utils.DamageSource;
 
 public interface EntityType {
@@ -24,5 +23,5 @@ public interface EntityType {
 
 	public void onWalkingEntity(BaseEntity baseEntity);
 
-	public void onInteractEntity(BaseEntity baseEntity, EntityLivingBase interacter);
+	public void onInteractEntity(BaseEntity baseEntity, BaseEntity interacter);
 }
