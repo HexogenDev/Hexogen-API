@@ -1,9 +1,9 @@
 package net.cyanwool.api.entity.types.passive;
 
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 
 public interface Chicken extends Passive {
 
-	public void dropEgg(Entity entity);
+	public void dropEgg(BaseEntity baseEntity);
 
 }

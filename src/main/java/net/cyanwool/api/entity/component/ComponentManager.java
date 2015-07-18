@@ -3,22 +3,22 @@ package net.cyanwool.api.entity.component;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 
 public class ComponentManager {
 
 	// private ConcurrentMap<String, Component> components;
 	private List<Component> components;
-	private Entity entity;
+	private BaseEntity baseEntity;
 
-	public ComponentManager(Entity entity) {
-		this.entity = entity;
+	public ComponentManager(BaseEntity baseEntity) {
+		this.baseEntity = baseEntity;
 		// this.components = new ConcurrentHashMap<String, Component>();
 		this.components = new CopyOnWriteArrayList<Component>();
 	}
 
-	public Entity getEntity() {
-		return entity;
+	public BaseEntity getEntity() {
+		return baseEntity;
 	}
 
 	public List<Component> getComponents() {

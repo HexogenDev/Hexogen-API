@@ -8,9 +8,11 @@ import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;
 import net.cyanwool.api.world.chunk.Chunk;
 
-public interface Entity extends ICommandSender {
+public interface BaseEntity extends ICommandSender {
 
 	public Position getPosition();
+	
+	public void teleport(Position pos);
 
 	public int getEntityID();
 
@@ -34,7 +36,7 @@ public interface Entity extends ICommandSender {
 
 	public Chunk getChunk();
 
-	public boolean canSeeEntity(Entity entity);
+	public boolean canSeeEntity(BaseEntity baseEntity);
 
 	public boolean canSeePosition(Position pos);
 

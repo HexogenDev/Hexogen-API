@@ -1,6 +1,6 @@
 package net.cyanwool.api.entity.component.generic;
 
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.entity.component.Component;
 import net.cyanwool.api.world.Position;
 
@@ -14,7 +14,5 @@ public interface Movement extends Component {
 
 	public void moveEntity(Position pos);
 
-	public void moveEntity(Entity entity);
-
-	public void teleport(Position pos);
+	public void moveEntity(BaseEntity baseEntity);
 }

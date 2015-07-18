@@ -2,7 +2,7 @@ package net.cyanwool.api.entity.types.player;
 
 import java.util.List;
 
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.network.PlayerNetwork;
 import net.cyanwool.api.world.Particle;
 import net.cyanwool.api.world.Position;
@@ -58,7 +58,7 @@ public interface Player extends Human {
 	public boolean isOnline();
 
 	@Override
-	public boolean canSeeEntity(Entity entity);
+	public boolean canSeeEntity(BaseEntity baseEntity);
 
 	public boolean canSeeChunk(Chunk chunk);
 }

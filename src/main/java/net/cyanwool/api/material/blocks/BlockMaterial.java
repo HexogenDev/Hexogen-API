@@ -1,7 +1,7 @@
 package net.cyanwool.api.material.blocks;
 
 import net.cyanwool.api.block.Block;
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.entity.types.player.Player;
 import net.cyanwool.api.inventory.item.ItemStack;
 import net.cyanwool.api.material.Material;
@@ -49,7 +49,7 @@ public class BlockMaterial extends ItemMaterial {
 		return true;
 	}
 
-	public void onEntityWalk(Entity entity, Block block) {
+	public void onEntityWalk(BaseEntity baseEntity, Block block) {
 	}
 
 	public int getLightValue() {

@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.cyanwool.api.Server;
 import net.cyanwool.api.block.Block;
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.entity.EntityLivingBase;
 import net.cyanwool.api.entity.types.EntityType;
 import net.cyanwool.api.entity.types.player.Player;
@@ -35,13 +35,13 @@ public interface World {
 
 	public void setSpawnPosition(Position pos);
 
-	public void playSoundAtEntity(Entity entity, String sound, float volume, float pitch);
+	public void playSoundAtEntity(BaseEntity baseEntity, String sound, float volume, float pitch);
 
 	public void playSound(Position pos, String sound, float volume, float pitch);
 
 	public void playSoundExpect(Position pos, String sound, float volume, float pitch, Player player);
 
-	public void playSoundAtEntity(Entity entity, Sound sound, float volume, float pitch);
+	public void playSoundAtEntity(BaseEntity baseEntity, Sound sound, float volume, float pitch);
 
 	public void playSound(Position pos, Sound sound, float volume, float pitch);
 
@@ -55,9 +55,9 @@ public interface World {
 
 	public void playParticleExpect(Position pos, Particle particle, int amount, int data, Player player);
 
-	public Entity spawnEntity(EntityType type, Position pos);
+	public BaseEntity spawnEntity(EntityType type, Position pos);
 
-	public Entity spawnUnknownEntity(Entity entity, Position pos);
+	public BaseEntity spawnUnknownEntity(BaseEntity baseEntity, Position pos);
 
 	public long getSeed();
 
@@ -85,7 +85,7 @@ public interface World {
 
 	public int getActualHeight();
 
-	public List<Entity> getEntities();
+	public List<BaseEntity> getEntities();
 
 	public List<EntityLivingBase> getLivingEntities();
 

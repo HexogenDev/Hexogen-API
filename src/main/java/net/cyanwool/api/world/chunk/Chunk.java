@@ -3,7 +3,7 @@ package net.cyanwool.api.world.chunk;
 import java.util.List;
 
 import net.cyanwool.api.block.Block;
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.material.blocks.BlockMaterial;
 import net.cyanwool.api.world.LightType;
 import net.cyanwool.api.world.Position;
@@ -45,7 +45,7 @@ public interface Chunk {
 
 	public void setLightLevel(LightType type, Position pos, int level);
 
-	public List<Entity> getEntities();
+	public List<BaseEntity> getEntities();
 
 	public boolean canSeeSky(Position pos);
 

@@ -1,6 +1,6 @@
 package net.cyanwool.api.entity.component;
 
-import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.BaseEntity;
 
 public interface Component {
 
@@ -10,7 +10,7 @@ public interface Component {
 
 	public boolean autoUpdate();
 
-	public Entity getEntity();
+	public BaseEntity getEntity();
 
 	public String getID();
 }

@@ -2,7 +2,7 @@ package net.cyanwool.api.entity;
 
 import net.cyanwool.api.world.sounds.Sound;
 
-public interface EntityLivingBase extends Entity {
+public interface EntityLivingBase extends BaseEntity {
 
 	public boolean isEntityUndead();
 
@@ -33,16 +33,4 @@ public interface EntityLivingBase extends Entity {
 	// public EntityJumpController getJumpController();
 
 	// public EntityLookController getLookController();
-
-	// Events...
-	public void onDamageEntity(Entity damager, float damage);
-
-	public void onAttackEntity(Entity target, float damage);
-
-	public void onDeathEntity();
-
-	public void onWalkingEntity();
-
-	public void onInteractEntity(EntityLivingBase interacter);
-
 }
