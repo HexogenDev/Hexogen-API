@@ -29,9 +29,6 @@ public class ComponentManager {
 	public synchronized boolean addComponent(Component component) {
 		if (!hasComponent(component.getClass())) {
 			// components.put(component.getID(), component);
-			if (component.getClass().isAssignableFrom(EntityData.class)) {
-				return false;
-			}
 			if (components.add(component)) {
 				component.initialization();
 				return true;

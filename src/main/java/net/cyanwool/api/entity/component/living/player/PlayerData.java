@@ -10,8 +10,8 @@ import net.cyanwool.api.world.chunk.ChunkCoords;
 import net.cyanwool.api.world.effect.Effect;
 import net.cyanwool.api.world.sounds.Sound;
 
-public interface PlayerData extends OfflinePlayerData{
-	
+public interface PlayerData extends OfflinePlayerData {
+
 	public boolean isDisableDamage();
 
 	public void setDisableDamage(boolean flag);

@@ -40,6 +40,8 @@ public interface BaseEntity extends ICommandSender {
 
 	public boolean canSeePosition(Position pos);
 
+	public boolean canSeeChunk(Chunk chunk);
+
 	@Override
 	public Server getServer();
 
