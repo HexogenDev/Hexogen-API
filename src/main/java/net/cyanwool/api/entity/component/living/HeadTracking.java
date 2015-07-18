@@ -10,6 +10,6 @@ public interface HeadTracking extends Component {
 	public boolean canSeeEntity(BaseEntity baseEntity);
 
 	public boolean canSeeChunk(Chunk chunk);
-	
+
 	public boolean canSeePosition(Position position);
 }

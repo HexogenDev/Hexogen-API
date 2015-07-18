@@ -3,7 +3,7 @@ package net.cyanwool.api.management;
 import java.util.List;
 
 import net.cyanwool.api.Server;
-import net.cyanwool.api.entity.types.player.Player;
+import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.world.World;
 
 public interface PlayerManager {
@@ -12,17 +12,17 @@ public interface PlayerManager {
 
 	// public void joinPlayer(GameProfile info);
 
-	public void spawnPlayer(Player player);
+	public void spawnPlayer(BaseEntity player);
 
 	// public void refreshPlayer(Player player, PlayerListEntryAction action);
 
-	public void leavePlayer(Player player);
+	public void leavePlayer(BaseEntity player);
 
-	public List<Player> getPlayers();
+	public List<BaseEntity> getPlayers();
 
 	public void sendMessageForAll(String message);
 
 	public void sendMessageForAll(World world, String message);
 
-	public Player getPlayer(String name);
+	public BaseEntity getPlayer(String name);
 }

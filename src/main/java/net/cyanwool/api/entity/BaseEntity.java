@@ -11,7 +11,7 @@ import net.cyanwool.api.world.chunk.Chunk;
 public interface BaseEntity extends ICommandSender {
 
 	public Position getPosition();
-	
+
 	public void teleport(Position pos);
 
 	public int getEntityID();

@@ -2,7 +2,6 @@ package net.cyanwool.api.material.blocks;
 
 import net.cyanwool.api.block.Block;
 import net.cyanwool.api.entity.BaseEntity;
-import net.cyanwool.api.entity.types.player.Player;
 import net.cyanwool.api.inventory.item.ItemStack;
 import net.cyanwool.api.material.Material;
 import net.cyanwool.api.material.items.ItemMaterial;
@@ -33,19 +32,19 @@ public class BlockMaterial extends ItemMaterial {
 		super(StringId, Id, metadata, customData);
 	}
 
-	public boolean onBlockPlaced(Player player, Position pos) {
+	public boolean onBlockPlaced(BaseEntity player, Position pos) {
 		return true;
 	}
 
-	public boolean onBlockDestroy(Player player, Block block) {
+	public boolean onBlockDestroy(BaseEntity player, Block block) {
 		return true;
 	}
 
-	public boolean onBlockInteract(Player player, Block block, ItemStack item) {
+	public boolean onBlockInteract(BaseEntity player, Block block, ItemStack item) {
 		return true;
 	}
 
-	public boolean onBlockDig(Player player, Block block, ItemStack item) {
+	public boolean onBlockDig(BaseEntity player, Block block, ItemStack item) {
 		return true;
 	}
 

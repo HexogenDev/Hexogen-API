@@ -1,11 +1,11 @@
 package net.cyanwool.api.network;
 
 import net.cyanwool.api.Server;
-import net.cyanwool.api.entity.types.player.Player;
+import net.cyanwool.api.entity.BaseEntity;
 
 public interface PlayerNetwork {
 
-	public Player getPlayer();
+	public BaseEntity getPlayer();
 
 	public void sendPacket(Packet packet);
 

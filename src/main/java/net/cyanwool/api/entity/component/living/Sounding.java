@@ -4,7 +4,7 @@ import net.cyanwool.api.entity.component.Component;
 import net.cyanwool.api.world.sounds.Sound;
 
 public interface Sounding extends Component {
-	
+
 	public Sound getDamageSound();
 
 	public Sound getTalkSound();
@@ -22,5 +22,5 @@ public interface Sounding extends Component {
 	public boolean playTalkSound();
 
 	public boolean playDeathSound();
-	
+
 }

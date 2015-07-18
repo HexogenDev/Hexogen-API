@@ -8,7 +8,7 @@ public interface EntityType {
 	public String getName();
 
 	public int getId();
-	
+
 	public void registerComponents(BaseEntity baseEntity);
 
 	public void onTick(BaseEntity baseEntity);

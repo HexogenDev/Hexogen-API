@@ -29,6 +29,9 @@ public class ComponentManager {
 	public synchronized boolean addComponent(Component component) {
 		if (!hasComponent(component.getClass())) {
 			// components.put(component.getID(), component);
+			if (component.getClass().isAssignableFrom(EntityData.class)) {
+				return false;
+			}
 			if (components.add(component)) {
 				component.initialization();
 				return true;
@@ -61,6 +64,10 @@ public class ComponentManager {
 			// // IS IMPOSSIBLE!!1!!
 			// return false;
 			// }
+
+			if (getComponent(component).getClass().isAssignableFrom(EntityData.class)) {
+				return false;
+			}
 			Component comp = getComponent(component);
 			components.remove(comp);
 			return true;
