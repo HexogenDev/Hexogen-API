@@ -1,11 +1,11 @@
-package net.cyanwool.api.entity.component.living.player;
+package net.cyanwool.api.entity.types.alive.player;
 
-import net.cyanwool.api.entity.component.Component;
+import net.cyanwool.api.entity.types.EntityType;
 import net.cyanwool.api.world.GameMode;
 
-public interface OfflinePlayerData extends Component {
-
-	public String getName();
+public interface Human extends EntityType {
+	
+	public String getPlayerName();
 
 	public GameMode getGameMode();
 
@@ -24,4 +24,5 @@ public interface OfflinePlayerData extends Component {
 	public boolean isWhitelisted();
 
 	public void setWhitelisted(boolean whitelisted);
+	
 }

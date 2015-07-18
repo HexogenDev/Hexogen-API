@@ -1,4 +1,4 @@
-package net.cyanwool.api.entity.component.living.player;
+package net.cyanwool.api.entity.types.alive.player;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import net.cyanwool.api.world.chunk.ChunkCoords;
 import net.cyanwool.api.world.effect.Effect;
 import net.cyanwool.api.world.sounds.Sound;
 
-public interface PlayerData extends OfflinePlayerData {
-
+public interface Player extends Human {
+	
 	public boolean isDisableDamage();
 
 	public void setDisableDamage(boolean flag);
@@ -63,4 +63,9 @@ public interface PlayerData extends OfflinePlayerData {
 	public void closeInventory();
 
 	public void kick(String message);
+
+	public String getLangCode();
+	
+	public void setLangCode(String code);
+	
 }

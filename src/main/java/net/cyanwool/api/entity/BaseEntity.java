@@ -33,6 +33,8 @@ public interface BaseEntity extends ICommandSender {
 	public void setInvisible(boolean flag);
 
 	public EntityType getEntityType();
+	
+	public void setEntityType(EntityType type);
 
 	public Chunk getChunk();
 

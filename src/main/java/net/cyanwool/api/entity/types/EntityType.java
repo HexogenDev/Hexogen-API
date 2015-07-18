@@ -4,24 +4,30 @@ import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.utils.DamageSource;
 
 public interface EntityType {
-
+	
 	public String getName();
-
+	
 	public int getId();
+	
+	public BaseEntity getEntity();
+	
+	public boolean isPlayer();
 
-	public void registerComponents(BaseEntity baseEntity);
+	public void registerComponents();
 
-	public void onTick(BaseEntity baseEntity);
+	public void onTick();
 
-	public void onDeathEntity(BaseEntity baseEntity, DamageSource source);
+	public void onDeathEntity(DamageSource source);
 
-	public void onDeathEntityByEntity(BaseEntity baseEntity, BaseEntity killer);
+	public void onDeathEntityByEntity(BaseEntity killer);
 
-	public void onDamageEntity(BaseEntity baseEntity, BaseEntity damager, float damage);
+	public void onDamageEntity(BaseEntity damager, float damage);
 
-	public void onAttackEntity(BaseEntity baseEntity, BaseEntity target, float damage);
+	public void onAttackEntity(BaseEntity target, float damage);
 
-	public void onWalkingEntity(BaseEntity baseEntity);
+	public void onWalkingEntity();
 
-	public void onInteractEntity(BaseEntity baseEntity, BaseEntity interacter);
+	public void onInteractEntity(BaseEntity interacter);
+	
+	public void onEntitySpawn();
 }

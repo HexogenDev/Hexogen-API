@@ -1,4 +1,4 @@
-package net.cyanwool.api.entity.types;
+package net.cyanwool.api.entity.types.alive;
 
 public enum LivingIds {
 
