@@ -56,7 +56,7 @@ public interface World {
 	public BaseEntity spawnEntity(EntityType type, Position pos);
 
 	public BaseEntity spawnUnknownEntity(BaseEntity baseEntity, Position pos);
-	
+
 	public BaseEntity spawnUnknownEntity(int id, Position pos);
 
 	public long getSeed();

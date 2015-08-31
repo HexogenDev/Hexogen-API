@@ -4,13 +4,13 @@ import net.cyanwool.api.entity.BaseEntity;
 import net.cyanwool.api.utils.DamageSource;
 
 public interface EntityType {
-	
+
 	public String getName();
-	
+
 	public int getId();
-	
+
 	public BaseEntity getEntity();
-	
+
 	public boolean isPlayer();
 
 	public void registerComponents();
@@ -28,6 +28,6 @@ public interface EntityType {
 	public void onWalkingEntity();
 
 	public void onInteractEntity(BaseEntity interacter);
-	
+
 	public void onEntitySpawn();
 }

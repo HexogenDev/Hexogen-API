@@ -4,7 +4,7 @@ import net.cyanwool.api.entity.types.EntityType;
 import net.cyanwool.api.world.GameMode;
 
 public interface Human extends EntityType {
-	
+
 	public String getPlayerName();
 
 	public GameMode getGameMode();
@@ -24,5 +24,5 @@ public interface Human extends EntityType {
 	public boolean isWhitelisted();
 
 	public void setWhitelisted(boolean whitelisted);
-	
+
 }

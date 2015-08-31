@@ -52,13 +52,13 @@ public class Plugin implements IPlugin {
 	}
 
 	@Override
-	public void setEnabled(boolean flag) {		
+	public void setEnabled(boolean flag) {
 		if (flag) {
 			if (!isEnabled()) {
 				getLogger().info("Enabling " + getDescription().getName() + " " + getDescription().getVersion() + " by " + getDescription().getDevelopers());
-				for(String sDepend: getDescription().getDependPlugins()){
+				for (String sDepend : getDescription().getDependPlugins()) {
 					IPlugin depend = getServer().getPluginManager().getPlugin(sDepend);
-					if(depend == null){
+					if (depend == null) {
 						getLogger().info("Revert load plugin: Invalid depend " + sDepend);
 						return;
 					}

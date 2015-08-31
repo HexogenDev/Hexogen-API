@@ -11,7 +11,7 @@ import net.cyanwool.api.world.effect.Effect;
 import net.cyanwool.api.world.sounds.Sound;
 
 public interface Player extends Human {
-	
+
 	public boolean isDisableDamage();
 
 	public void setDisableDamage(boolean flag);
@@ -65,7 +65,7 @@ public interface Player extends Human {
 	public void kick(String message);
 
 	public String getLangCode();
-	
+
 	public void setLangCode(String code);
-	
+
 }

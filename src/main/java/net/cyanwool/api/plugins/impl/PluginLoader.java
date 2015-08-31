@@ -22,7 +22,7 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 		this.parent = parent;
 	}
 
-	public IPluginDescription loadPlugin(String pluginPath) throws InvalidPluginException{
+	public IPluginDescription loadPlugin(String pluginPath) throws InvalidPluginException {
 		JarFile pluginJar = null;
 		InputStream inputStream = null;
 		try {
@@ -32,9 +32,9 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 				extracted(pluginPath);
 			}
 			inputStream = pluginJar.getInputStream(jarEntry);
-			
+
 			YamlConfiguration config = YamlConfiguration.loadConfiguration(inputStream);
-			
+
 			String name = config.getString("name");
 			String main = config.getString("mainClass");
 			String version = config.getString("version");
@@ -42,7 +42,7 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 			List<String> depends = config.getStringList("depends");
 			List<String> developers = config.getStringList("developers");
 			IPluginDescription descrption = new PluginDescription(name, main, developers, version, description, depends);
-			
+
 			Enumeration<JarEntry> entries = pluginJar.entries();
 			while (entries.hasMoreElements()) {
 				JarEntry entry = entries.nextElement();
@@ -61,18 +61,18 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 		} catch (Exception e) {
 			throw new InvalidPluginException(e);
 		} finally {
-            if (pluginJar != null) {
-                try {
-                    pluginJar.close();
-                } catch (IOException e) {
-                }
-            }
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                }
-            }
+			if (pluginJar != null) {
+				try {
+					pluginJar.close();
+				} catch (IOException e) {
+				}
+			}
+			if (inputStream != null) {
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+				}
+			}
 		}
 	}
 

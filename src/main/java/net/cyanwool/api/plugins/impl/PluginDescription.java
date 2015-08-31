@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.cyanwool.api.plugins.IPluginDescription;
 
-public class PluginDescription implements IPluginDescription{
+public class PluginDescription implements IPluginDescription {
 
 	private String name;
 	private List<String> developers;
@@ -12,7 +12,7 @@ public class PluginDescription implements IPluginDescription{
 	private String description;
 	private List<String> depends;
 	private String main;
-	
+
 	public PluginDescription(String name, String main, List<String> developers, String version, String description, List<String> depends) {
 		this.name = name;
 		this.developers = developers;
@@ -21,7 +21,7 @@ public class PluginDescription implements IPluginDescription{
 		this.depends = depends;
 		this.main = main;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
