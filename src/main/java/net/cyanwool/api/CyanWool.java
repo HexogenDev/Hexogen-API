@@ -12,7 +12,7 @@ import net.cyanwool.api.management.PlayerManager;
 import net.cyanwool.api.management.WhitelistManager;
 import net.cyanwool.api.network.NetworkServer;
 import net.cyanwool.api.packs.ServerPack;
-import net.cyanwool.api.plugins.PluginManager;
+import net.cyanwool.api.plugins.IPluginManager;
 import net.cyanwool.api.scheduler.Scheduler;
 import net.cyanwool.api.utils.Registry;
 import net.cyanwool.api.utils.ServerConfiguration;
@@ -172,7 +172,7 @@ public class CyanWool {
 	/**
 	 * Менеджер для регистрации плагинов
 	 */
-	public static PluginManager getPluginManager() {
+	public static IPluginManager getPluginManager() {
 		return getServer().getPluginManager();
 	}
 

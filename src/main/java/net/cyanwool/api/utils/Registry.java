@@ -1,13 +1,13 @@
 package net.cyanwool.api.utils;
 
 import net.cyanwool.api.material.Material;
-import net.cyanwool.api.plugins.Plugin;
+import net.cyanwool.api.plugins.IPlugin;
 
 public interface Registry {
 
 	public boolean registerMaterial(String prefix, Material mat);
 
-	public boolean registerMaterial(Plugin plugin, Material mat);
+	public boolean registerMaterial(IPlugin plugin, Material mat);
 
 	public Material getMaterialFromId(String prefix, int id);
 

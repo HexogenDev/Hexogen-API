@@ -2,16 +2,18 @@ package net.cyanwool.api.plugins;
 
 import java.util.List;
 
-public interface PluginDescription {
+public interface IPluginDescription {
 
 	public String getName();
+
+	public List<String> getDevelopers();
 
 	public String getVersion();
 
 	public String getDescription();
 
-	public List<String> getAuthors();
+	public List<String> getDependPlugins();
 
-	public List<String> getDepends();
+	public String getMain();
 
 }
