@@ -22,11 +22,7 @@ public class VersionCommand extends Command {
 		list.add(ChatColor.AQUA + CyanWool.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.version.modname") + ": " + ChatColor.WHITE + CyanWool.getModName());
 		list.add(ChatColor.AQUA + CyanWool.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.version.mcversion") + ": " + ChatColor.WHITE + CyanWool.getMCVersion());
 
-		List<String> dev = CyanWool.getDevelopers();
 		list.add(ChatColor.AQUA + CyanWool.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.version.developers") + ": ");
-		for (String developer : dev) {
-			list.add("- " + developer);
-		}
 
 		for (String message : list) {
 			sender.sendMessage(message);

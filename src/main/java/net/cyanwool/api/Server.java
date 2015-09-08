@@ -1,7 +1,5 @@
 package net.cyanwool.api;
 
-import java.util.List;
-
 import net.cyanwool.api.command.CommandManager;
 import net.cyanwool.api.command.ConsoleCommandSender;
 import net.cyanwool.api.entity.EntityManager;
@@ -35,6 +33,13 @@ public interface Server {
 	 * @return Версия
 	 */
 	public String getMCVersion();
+
+	/**
+	 * Тип реализации (Например: Standalone или Platform)
+	 * 
+	 * @return String
+	 */
+	public String getImplementationType();
 
 	/**
 	 * Запуск сервера
@@ -103,13 +108,6 @@ public interface Server {
 	 *            - Сообщение
 	 */
 	public void shutdown(String message);
-
-	/**
-	 * Список разработчиков
-	 * 
-	 * @return
-	 */
-	public List<String> getDevelopers();
 
 	/**
 	 * Регистратор блоков и предметов

@@ -1,7 +1,5 @@
 package net.cyanwool.api;
 
-import java.util.List;
-
 import net.cyanwool.api.command.CommandManager;
 import net.cyanwool.api.command.ConsoleCommandSender;
 import net.cyanwool.api.entity.EntityManager;
@@ -36,11 +34,7 @@ public class CyanWool {
 			return;
 		}
 		server = init;
-		getServer().getLogger().info("#====#_CyanWool_#====#");
-		getServer().getLogger().info("Mod Name: " + getServer().getModName());
-		getServer().getLogger().info("Host Address: " + getServer().getNetworkServer().getHostAddress());
-		getServer().getLogger().info("Port: " + getServer().getNetworkServer().getPort());
-		getServer().getLogger().info("Minecraft Version: " + getServer().getMCVersion());
+		getServer().getLogger().info("Starting minecraft server " + getServer().getModName() + " (Minecraft Version: " + getServer().getMCVersion() + ")");
 		getServer().start();
 	}
 
@@ -70,6 +64,15 @@ public class CyanWool {
 	 */
 	public static String getMCVersion() {
 		return getServer().getMCVersion();
+	}
+
+	/**
+	 * Тип реализации (Например: Standalone или Platform)
+	 * 
+	 * @return String
+	 */
+	public String getImplementationType() {
+		return getServer().getImplementationType();
 	}
 
 	/**
@@ -151,15 +154,6 @@ public class CyanWool {
 	 */
 	public static LanguageManager getLanguageManager() {
 		return getServer().getLanguageManager();
-	}
-
-	/**
-	 * Список разработчиков
-	 * 
-	 * @return
-	 */
-	public static List<String> getDevelopers() {
-		return getServer().getDevelopers();
 	}
 
 	/**
