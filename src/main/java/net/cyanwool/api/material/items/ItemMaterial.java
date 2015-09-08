@@ -1,7 +1,8 @@
 package net.cyanwool.api.material.items;
 
 import net.cyanwool.api.block.Block;
-import net.cyanwool.api.entity.BaseEntity;
+import net.cyanwool.api.entity.EntityLivingBase;
+import net.cyanwool.api.entity.alive.player.Player;
 import net.cyanwool.api.inventory.item.ItemStack;
 import net.cyanwool.api.material.Material;
 import net.cyanwool.api.utils.BlockSide;
@@ -45,33 +46,33 @@ public class ItemMaterial extends Material {
 		maxAttackDamage = max;
 	}
 
-	public boolean onItemUse(ItemStack stack, BaseEntity player, World world, Position pos, BlockSide side) {
+	public boolean onItemUse(ItemStack stack, Player player, World world, Position pos, BlockSide side) {
 		return true;
 	}
 
-	public boolean onItemRightClick(ItemStack itemStackIn, World worldIn, BaseEntity playerIn) {
+	public boolean onItemRightClick(ItemStack itemStackIn, World worldIn, Player playerIn) {
 		return true;
 	}
 
-	public boolean onItemLeftClick(ItemStack itemStackIn, World worldIn, BaseEntity playerIn) {
+	public boolean onItemLeftClick(ItemStack itemStackIn, World worldIn, Player playerIn) {
 		return true;
 	}
 
-	public boolean onItemUseFinish(ItemStack stack, World worldIn, BaseEntity playerIn) {
+	public boolean onItemUseFinish(ItemStack stack, World worldIn, Player playerIn) {
 		return true;
 	}
 
-	public boolean onHitEntity(ItemStack stack, BaseEntity target, BaseEntity attacker) {
+	public boolean onHitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		return true;
 	}
 
-	public boolean onBlockDestroyed(ItemStack stack, World worldIn, Block blockIn, Position pos, BaseEntity playerIn) {
+	public boolean onBlockDestroyed(ItemStack stack, World worldIn, Block blockIn, Position pos, Player playerIn) {
 		return true;
 	}
 
-	public void onCreatedItem(ItemStack stack, World worldIn, BaseEntity playerIn) {
+	public void onCreatedItem(ItemStack stack, World worldIn, Player playerIn) {
 	}
 
-	public void onPlayerStoppedUsing(ItemStack stack, World worldIn, BaseEntity playerIn, int timeLeft) {
+	public void onPlayerStoppedUsing(ItemStack stack, World worldIn, Player playerIn, int timeLeft) {
 	}
 }

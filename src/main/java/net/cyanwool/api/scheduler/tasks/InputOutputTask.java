@@ -9,13 +9,11 @@ public class InputOutputTask implements Runnable {
 
 	private CopyOnWriteArrayList<IORequest> requests;
 	private Server server;
-	private int i;
 	private boolean running;
 
 	public InputOutputTask(Server server) {
 		this.server = server;
 		this.requests = new CopyOnWriteArrayList<IORequest>();
-		this.i = 0;
 		this.running = true;
 	}
 
@@ -32,9 +30,7 @@ public class InputOutputTask implements Runnable {
 	@Override
 	public void run() {
 		if (isRunning()) {
-			this.i = 0;
-			while (!this.requests.isEmpty() && i <= server.getServerConfiguration().getMaxIterationsIO()) {
-				i++;
+			while (!this.requests.isEmpty()) {
 				IORequest request = requests.get(0);
 				request.update();
 				requests.remove(0);

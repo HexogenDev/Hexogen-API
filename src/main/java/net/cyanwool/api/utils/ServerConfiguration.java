@@ -2,7 +2,9 @@ package net.cyanwool.api.utils;
 
 public interface ServerConfiguration {
 
-	public String getIPAdress();
+	public void loadFromFile();
+
+	public String getIPAddress();
 
 	public int getPort();
 
@@ -22,11 +24,15 @@ public interface ServerConfiguration {
 
 	public void setRadiusViewDistance(int view);
 
-	public int getMaxIterationsIO();
-
-	public void setMaxIterationsIO(int iterations);
-
 	public int getCountThreads();
 
 	public void setCountThreads(int count);
+
+	public boolean isDeveloperMode();
+
+	public void setDeveloperMode(boolean flag);
+
+	public Object getValue(String key);
+
+	public void setValue(String key, Object value);
 }

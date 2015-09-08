@@ -7,15 +7,15 @@ import net.cyanwool.api.world.Position;
 
 public interface EntityManager {
 
-	public Collection<BaseEntity> getAll();
+	public Collection<Entity> getAll();
 
-	public BaseEntity getEntity(int id);
+	public Entity getEntity(int id);
 
-	public void registerEntity(BaseEntity baseEntity);
+	public void registerEntity(Entity entity);
 
-	public void unregisterEntity(BaseEntity baseEntity);
+	public void unregisterEntity(Entity entity);
 
-	public void moveToOtherPosition(BaseEntity baseEntity, Position pos);
+	public void moveToOtherPosition(Entity entity, Position pos);
 
 	public Server getServer();
 }

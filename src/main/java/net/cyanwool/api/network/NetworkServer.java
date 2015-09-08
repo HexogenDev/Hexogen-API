@@ -1,6 +1,6 @@
 package net.cyanwool.api.network;
 
-import net.cyanwool.api.entity.BaseEntity;
+import net.cyanwool.api.entity.alive.player.Player;
 import net.cyanwool.api.world.Position;
 
 public interface NetworkServer {
@@ -17,8 +17,8 @@ public interface NetworkServer {
 
 	public void sendPacketDistance(Position pos, Packet packet, int radius);
 
-	public void sendPacketForAllExpect(Packet packet, BaseEntity expect);
+	public void sendPacketForAllExpect(Packet packet, Player expect);
 
-	public void sendPacketDistanceExpect(Position pos, Packet packet, int radius, BaseEntity expect);
+	public void sendPacketDistanceExpect(Position pos, Packet packet, int radius, Player expect);
 
 }

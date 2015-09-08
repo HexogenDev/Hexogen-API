@@ -1,7 +1,6 @@
 package net.cyanwool.api.utils;
 
-import net.cyanwool.api.entity.BaseEntity;
-import net.cyanwool.api.entity.component.living.HeadRotation;
+import net.cyanwool.api.entity.EntityLivingBase;
 
 /**
  * http://www.minecraftforum.net/forums/mapping-and-modding/mapping-and-modding-tutorials/1571226-coding-forge-how-to-properly-confuse-minecraft/
@@ -23,12 +22,9 @@ public enum BlockSide {
 	 *            the entity in question
 	 * @return the direction the entity is facing as CW 0 (west) to 3 (south)
 	 */
-	public static int getLookDirection(final BaseEntity entity) {
-		HeadRotation rotation = (HeadRotation) entity.getComponentManager().getComponent(HeadRotation.class);
-		if (rotation != null) {
-			float yaw = rotation.getHeadRotation().getYaw();
-			return (int) Math.floor(((yaw + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
-		}
+	public static int getLookDirection(final EntityLivingBase entity) {
+		float yaw = entity.getHeadRotation().getYaw();
+		return (int) Math.floor(((yaw + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
 		// is
 		// -180°
 		// (north)
@@ -41,7 +37,6 @@ public enum BlockSide {
 		// modulo
 		// with
 		// &
-		return 0;
 	}
 
 	/**
@@ -51,12 +46,9 @@ public enum BlockSide {
 	 *            the entity in question
 	 * @return the direction that is facing the entity as CW 0 (west) to 3 (south)
 	 */
-	public static int getDirectionFacing(final BaseEntity entity) {
-		HeadRotation rotation = (HeadRotation) entity.getComponentManager().getComponent(HeadRotation.class);
-		if (rotation != null) {
-			float yaw = rotation.getHeadRotation().getYaw();
-			return (int) Math.floor(((yaw + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
-		}
+	public static int getDirectionFacing(final EntityLivingBase entity) {
+		float yaw = entity.getHeadRotation().getYaw();
+		return (int) Math.floor(((yaw + 360.0F - 45.0F + 180.0F)) / 90.0) & 3; // Minecraft
 		// is
 		// -180°
 		// (north)
@@ -69,7 +61,6 @@ public enum BlockSide {
 		// modulo
 		// with
 		// &
-		return 0;
 	}
 
 	/**

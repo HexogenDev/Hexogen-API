@@ -4,8 +4,10 @@ import java.util.List;
 
 import net.cyanwool.api.Server;
 import net.cyanwool.api.block.Block;
-import net.cyanwool.api.entity.BaseEntity;
-import net.cyanwool.api.entity.types.EntityType;
+import net.cyanwool.api.entity.Entity;
+import net.cyanwool.api.entity.EntityLivingBase;
+import net.cyanwool.api.entity.EntityType;
+import net.cyanwool.api.entity.alive.player.Player;
 import net.cyanwool.api.material.blocks.BlockMaterial;
 import net.cyanwool.api.world.chunk.ChunkManager;
 import net.cyanwool.api.world.effect.Effect;
@@ -33,31 +35,31 @@ public interface World {
 
 	public void setSpawnPosition(Position pos);
 
-	public void playSoundAtEntity(BaseEntity baseEntity, String sound, float volume, float pitch);
+	public void playSoundAtEntity(Entity baseEntity, String sound, float volume, float pitch);
 
 	public void playSound(Position pos, String sound, float volume, float pitch);
 
-	public void playSoundExpect(Position pos, String sound, float volume, float pitch, BaseEntity player);
+	public void playSoundExpect(Position pos, String sound, float volume, float pitch, Player player);
 
-	public void playSoundAtEntity(BaseEntity baseEntity, Sound sound, float volume, float pitch);
+	public void playSoundAtEntity(Entity baseEntity, Sound sound, float volume, float pitch);
 
 	public void playSound(Position pos, Sound sound, float volume, float pitch);
 
 	public void playEffect(Position pos, Effect effect, int data);
 
-	public void playSoundExpect(Position pos, Sound sound, float volume, float pitch, BaseEntity player);
+	public void playSoundExpect(Position pos, Sound sound, float volume, float pitch, Player player);
 
-	public void playEffectExpect(Position pos, Effect effect, int data, BaseEntity player);
+	public void playEffectExpect(Position pos, Effect effect, int data, Player player);
 
 	public void playParticle(Position pos, Particle particle, int amount, int data);
 
-	public void playParticleExpect(Position pos, Particle particle, int amount, int data, BaseEntity player);
+	public void playParticleExpect(Position pos, Particle particle, int amount, int data, Player player);
 
-	public BaseEntity spawnEntity(EntityType type, Position pos);
+	public Entity spawnEntity(EntityType type, Position pos);
 
-	public BaseEntity spawnUnknownEntity(BaseEntity baseEntity, Position pos);
+	public Entity spawnUnknownEntity(Entity baseEntity, Position pos);
 
-	public BaseEntity spawnUnknownEntity(int id, Position pos);
+	public Entity spawnUnknownEntity(int id, Position pos);
 
 	public long getSeed();
 
@@ -85,11 +87,11 @@ public interface World {
 
 	public int getActualHeight();
 
-	public List<BaseEntity> getEntities();
+	public List<Entity> getEntities();
 
-	public List<BaseEntity> getLivingEntities();
+	public List<EntityLivingBase> getLivingEntities();
 
-	public List<BaseEntity> getPlayers();
+	public List<Player> getPlayers();
 
 	public void onTick();
 

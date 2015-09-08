@@ -1,10 +1,10 @@
 package net.cyanwool.api;
 
-import net.cyanwool.api.command.CommandManager;
 import net.cyanwool.api.command.ConsoleCommandSender;
+import net.cyanwool.api.command.ICommandManager;
 import net.cyanwool.api.entity.EntityManager;
 import net.cyanwool.api.io.IOManager;
-import net.cyanwool.api.lang.LanguageManager;
+import net.cyanwool.api.lang.ILanguageManager;
 import net.cyanwool.api.management.OperatorsManager;
 import net.cyanwool.api.management.PlayerManager;
 import net.cyanwool.api.management.WhitelistManager;
@@ -99,7 +99,7 @@ public interface Server {
 	/**
 	 * Менеджер языковых пакетов
 	 */
-	public LanguageManager getLanguageManager();
+	public ILanguageManager getLanguageManager();
 
 	/**
 	 * Выключить сервер с сообщением
@@ -124,7 +124,7 @@ public interface Server {
 	 * 
 	 * @return
 	 */
-	public CommandManager getCommandManager();
+	public ICommandManager getCommandManager();
 
 	/**
 	 * Консоль
