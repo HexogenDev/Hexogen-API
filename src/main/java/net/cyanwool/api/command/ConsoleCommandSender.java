@@ -3,11 +3,13 @@ package net.cyanwool.api.command;
 import net.cyanwool.api.CyanWool;
 import net.cyanwool.api.Server;
 import net.cyanwool.api.utils.ChatColor;
+import net.cyanwool.api.utils.chatReplacer.ReplacerManager;
 
 public class ConsoleCommandSender implements ICommandSender {
 
 	@Override
 	public void sendMessage(String message) {
+		message = ReplacerManager.replace(message, message, this);// ???
 		String mess = ChatColor.stripColor(message);
 		getServer().getLogger().info(mess);
 	}

@@ -71,7 +71,7 @@ public class CyanWool {
 	 * 
 	 * @return String
 	 */
-	public String getImplementationType() {
+	public static String getImplementationType() {
 		return getServer().getImplementationType();
 	}
 
