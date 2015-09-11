@@ -1,8 +1,11 @@
 package net.cyanwool.api.entity;
 
+import java.util.List;
+
 import net.cyanwool.api.Server;
 import net.cyanwool.api.entity.controllers.EntityController;
 import net.cyanwool.api.entity.controllers.EntityMoveController;
+import net.cyanwool.api.network.Packet;
 import net.cyanwool.api.utils.Rotation;
 import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;
@@ -73,9 +76,9 @@ public interface Entity {
 
 	// public CompoundTag getCompoundTag();
 
-	// public List<Packet> getUpdatePackets();
+	public List<Packet> getUpdatePackets();
 
-	// public abstract List<Packet> getSpawnPackets();
+	public abstract List<Packet> getSpawnPackets();
 
 	public void setEntityID(int id);
 }

@@ -14,16 +14,15 @@ public class ConsoleTask implements Runnable {
 		this.server = server;
 	}
 
-
 	@Override
 	public void run() {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));// Console...
-			// Maybe...
-			try {
-				String line = reader.readLine();
-				server.getCommandManager().dispatchCommand(server.getConsoleCommandSender(), line);
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
+		// Maybe...
+		try {
+			String line = reader.readLine();
+			server.getCommandManager().dispatchCommand(server.getConsoleCommandSender(), line);
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
 	}
 }

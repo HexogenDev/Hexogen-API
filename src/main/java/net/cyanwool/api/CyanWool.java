@@ -202,8 +202,8 @@ public class CyanWool {
 	}
 
 	/**
-     * 
-     */
+	 * 
+	 */
 	public Scheduler getScheduler() {
 		return getServer().getScheduler();
 	}
