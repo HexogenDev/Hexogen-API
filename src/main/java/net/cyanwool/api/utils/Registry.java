@@ -1,8 +1,10 @@
 package net.cyanwool.api.utils;
 
+import net.cyanwool.api.entity.Entity;
 import net.cyanwool.api.entity.EntityType;
 import net.cyanwool.api.material.Material;
 import net.cyanwool.api.plugins.IPlugin;
+import net.cyanwool.api.world.Position;
 
 public interface Registry {
 
@@ -28,15 +30,15 @@ public interface Registry {
 	// public boolean unregisterMaterial(String prefix, int id);
 
 	// Entity
-	public boolean registerEntity(int id, String name, Class<?> entity);
+	public boolean registerEntity(int id, String name, Class<? extends Entity> entity);
 
-	public boolean registerEntity(EntityType type, Class<?> entity);
+	public boolean registerEntity(EntityType type, Class<? extends Entity> entity);
 
-	public Class<?> getEntity(int id);
+	public Entity createEntity(int id, Position pos);
 
-	public Class<?> getEntity(EntityType type);
+	public Entity createEntity(EntityType type, Position pos);
 
-	public boolean unregisterEntity(int id);
+	public boolean unregisterEntity(int id, String name);
 
 	public boolean unregisterEntity(EntityType type);
 }
