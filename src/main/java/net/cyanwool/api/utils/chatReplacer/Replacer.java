@@ -6,6 +6,6 @@ public interface Replacer {
 
 	public String getDetectWord();
 
-	public String getReplaceWord(String format, String message, ICommandSender sender); // /???
+	public String getReplaceWord(String message, ICommandSender sender); // /???
 
 }

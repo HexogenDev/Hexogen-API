@@ -35,26 +35,19 @@ public class ReplacerManager {
 		return replacers.get(replacerWords);
 	}
 
+	public static String replace(String format, ICommandSender sender) {
+		return replace(format, null, sender);
+	}
+
 	public static String replace(String format, String message, ICommandSender user) {// ??
 		for (String word : replacers.keySet()) {
 			Replacer replacer = getReplacer(word);
 			if (format.contains(replacer.getDetectWord())) {
-				format = format.replace(replacer.getDetectWord(), replacer.getReplaceWord(format, message, user));
+				format = format.replace(replacer.getDetectWord(), replacer.getReplaceWord(message, user));
 			}
 		}
 		format = ChatColor.translateAlternateColorCodes('&', format);
 		return format;
-	}
-
-	public String replaceV2(String message, ICommandSender user) {// ??
-		for (String word : replacers.keySet()) {
-			Replacer replacer = getReplacer(word);
-			if (message.contains(replacer.getDetectWord())) {
-				message = message.replace(replacer.getDetectWord(), replacer.getReplaceWord(message, message, user));
-			}
-		}
-		message = ChatColor.translateAlternateColorCodes('&', message);
-		return message;
 	}
 
 	public static boolean hasReplacer(String word) {

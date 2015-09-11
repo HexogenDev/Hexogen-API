@@ -9,7 +9,6 @@ import net.cyanwool.api.management.OperatorsManager;
 import net.cyanwool.api.management.PlayerManager;
 import net.cyanwool.api.management.WhitelistManager;
 import net.cyanwool.api.network.NetworkServer;
-import net.cyanwool.api.packs.ServerPack;
 import net.cyanwool.api.plugins.IPluginManager;
 import net.cyanwool.api.scheduler.Scheduler;
 import net.cyanwool.api.utils.Registry;
@@ -186,13 +185,6 @@ public class CyanWool {
 	 */
 	public ConsoleCommandSender getConsoleCommandSender() {
 		return getServer().getConsoleCommandSender();
-	}
-
-	/**
-     * 
-     */
-	public ServerPack getServerPack() {
-		return getServer().getServerPack();
 	}
 
 	/**

@@ -1,23 +1,32 @@
 package net.cyanwool.api.entity.alive;
 
-public enum LivingEntityType {
+import net.cyanwool.api.entity.EntityType;
+
+public enum LivingEntityType implements EntityType {
 
 	// Based: http://minecraft.gamepedia.com/Data_values/Entity_IDs
 
 	// Hostile mobs
-	CREEPER(50), SKELETON(51), SPIDER(52), GIANT(53), ZOMBIE(54), SLIME(55), GHAST(56), ZOMBIE_PIGMAN(57), ENDERMAN(58), CAVE_SPIDER(59), SILVERFISH(60), BLAZE(61), MAGMA_CUBE(62), ENDER_DRAGON(63), WITHER(64), WITCH(66), ENDERMITE(67), GUARDIAN(68), KILLER_RABBIT(101),
+	CREEPER(50, "Creeper"), SKELETON(51, "Skeleton"), SPIDER(52, "Spider"), GIANT(53, "Giant"), ZOMBIE(54, "Zombie"), SLIME(55, "Slime"), GHAST(56, "Ghast"), ZOMBIE_PIGMAN(57, "Pigman"), ENDERMAN(58, "Enderman"), CAVE_SPIDER(59, "CaveSpider"), SILVERFISH(60, "Silverfish"), BLAZE(61, "Blaze"), MAGMA_CUBE(62, "MagmaCube"), ENDER_DRAGON(63, "EnderDragon"), WITHER(64, "Wither"), WITCH(66, "Witch"), ENDERMITE(67, "Endermite"), GUARDIAN(68, "Guardian"), KILLER_RABBIT(101, "KillerRabbit"),
 
 	// Passive mobs
-	BAT(65), PIG(90), SHEEP(91), COW(92), CHICKEN(93), SQUID(94), WOLF(95), MOOSHROOM(96), SNOW_GOLEM(97), OCELOT(98), IRON_GOLEM(99), HORSE(100), RABBIT(101);
+	BAT(65, "Bat"), PIG(90, "Pig"), SHEEP(91, "Sheep"), COW(92, "Cow"), CHICKEN(93, "Chicken"), SQUID(94, "Squid"), WOLF(95, "Wolf"), MOOSHROOM(96, "Mooshroom"), SNOW_GOLEM(97, "SnowGolem"), OCELOT(98, "Ocelot"), IRON_GOLEM(99, "IronGolem"), HORSE(100, "Horse"), RABBIT(101, "Rabbit");
 
 	private int id;
+	private String name;
 
-	private LivingEntityType(int id) {
+	private LivingEntityType(int id, String name) {
 		this.id = id;
+		this.name = name;
 	}
 
 	public int getId() {
 		return id;
+	}
+
+	@Override
+	public String getName() {
+		return name;
 	}
 
 }

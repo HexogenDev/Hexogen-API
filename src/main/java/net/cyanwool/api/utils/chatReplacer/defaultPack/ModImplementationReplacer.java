@@ -12,7 +12,7 @@ public class ModImplementationReplacer implements Replacer {
 	}
 
 	@Override
-	public String getReplaceWord(String format, String message, ICommandSender user) {
+	public String getReplaceWord(String message, ICommandSender user) {
 		return CyanWool.getImplementationType();
 	}
 

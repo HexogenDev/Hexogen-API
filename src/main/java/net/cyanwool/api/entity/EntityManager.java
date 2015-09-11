@@ -7,7 +7,7 @@ import net.cyanwool.api.world.Position;
 
 public interface EntityManager {
 
-	public Collection<Entity> getAll();
+	public Collection<Entity> getAllEntities();
 
 	public Entity getEntity(int id);
 

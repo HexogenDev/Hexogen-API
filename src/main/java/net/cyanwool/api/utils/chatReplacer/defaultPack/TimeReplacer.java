@@ -14,7 +14,7 @@ public class TimeReplacer implements Replacer {
 	}
 
 	@Override
-	public String getReplaceWord(String format, String message, ICommandSender user) {
+	public String getReplaceWord(String message, ICommandSender user) {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 		String time = sdf.format(date);

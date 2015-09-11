@@ -6,6 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import net.cyanwool.api.CyanWool;
 import net.cyanwool.api.command.ICommand;
 import net.cyanwool.api.command.ICommandSender;
+import net.cyanwool.api.utils.chatReplacer.ReplacerManager;
 
 public class InfoCommand implements ICommand {
 
@@ -25,6 +26,7 @@ public class InfoCommand implements ICommand {
 		// sender.sendMessage(message);
 		// }
 		String text = CyanWool.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.aboutServer");
+		text = ReplacerManager.replace(text, sender);
 		sender.sendMessage(text);
 	}
 
