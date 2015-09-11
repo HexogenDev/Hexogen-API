@@ -21,4 +21,6 @@ public interface NetworkServer {
 
 	public void sendPacketDistanceExpect(Position pos, Packet packet, int radius, Player expect);
 
+	public void shutdown();
+
 }

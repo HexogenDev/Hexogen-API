@@ -15,6 +15,8 @@ import net.cyanwool.api.utils.Registry;
 import net.cyanwool.api.utils.ServerConfiguration;
 import net.cyanwool.api.world.WorldManager;
 
+import java.awt.image.BufferedImage;
+
 import org.apache.logging.log4j.Logger;
 
 public interface Server {
@@ -148,7 +150,14 @@ public interface Server {
 	public WorldManager getWorldManager();
 
 	/**
-     * 
-     */
+	 * 
+	 */
 	public Scheduler getScheduler();
+
+	/**
+	 * Иконка сервера
+	 * 
+	 * @return image
+	 */
+	public BufferedImage getIcon();
 }
