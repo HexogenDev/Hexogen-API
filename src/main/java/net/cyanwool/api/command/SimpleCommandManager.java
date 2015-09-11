@@ -6,6 +6,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import net.cyanwool.api.Server;
 import net.cyanwool.api.command.defaultcmd.InfoCommand;
+import net.cyanwool.api.command.defaultcmd.PluginsCommand;
+import net.cyanwool.api.command.defaultcmd.ShutdownCommand;
 
 public class SimpleCommandManager implements ICommandManager {
 
@@ -18,6 +20,8 @@ public class SimpleCommandManager implements ICommandManager {
 
 		// reg command
 		registerCommand(new InfoCommand());
+		registerCommand(new PluginsCommand());
+		registerCommand(new ShutdownCommand());
 	}
 
 	@Override
