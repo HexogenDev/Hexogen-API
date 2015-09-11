@@ -36,6 +36,8 @@ public interface Registry {
 
 	public Entity createEntity(int id, Position pos);
 
+	public Entity createEntity(String name, Position pos);
+	
 	public Entity createEntity(EntityType type, Position pos);
 
 	public boolean unregisterEntity(int id, String name);
