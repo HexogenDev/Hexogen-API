@@ -1,5 +1,7 @@
 package net.cyanwool.api.utils;
 
+import java.awt.image.BufferedImage;
+
 public interface ServerConfiguration {
 
 	public void loadFromFile();
@@ -35,4 +37,6 @@ public interface ServerConfiguration {
 	public Object getValue(String key);
 
 	public void setValue(String key, Object value);
+
+	public BufferedImage getIcon();
 }

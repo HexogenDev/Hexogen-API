@@ -1,5 +1,7 @@
 package net.cyanwool.api;
 
+import org.apache.logging.log4j.Logger;
+
 import net.cyanwool.api.command.ConsoleCommandSender;
 import net.cyanwool.api.command.ICommandManager;
 import net.cyanwool.api.entity.EntityManager;
@@ -13,8 +15,6 @@ import net.cyanwool.api.plugins.IPluginManager;
 import net.cyanwool.api.scheduler.Scheduler;
 import net.cyanwool.api.utils.Registry;
 import net.cyanwool.api.utils.ServerConfiguration;
-
-import org.apache.logging.log4j.Logger;
 
 public class CyanWool {
 

@@ -1,7 +1,10 @@
 package net.cyanwool.api.utils;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import net.cyanwool.api.configuration.file.YamlConfiguration;
 
@@ -15,6 +18,7 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 	private int viewDistance;
 	private int threads;
 	private boolean developerMode;
+	private BufferedImage icon;
 
 	private File file;
 	private YamlConfiguration config;
@@ -54,6 +58,7 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 		}
 
 		boolean developer = config.getBoolean("developer-mode");
+		String fileIcon = config.getString("icon-file-name");
 
 		this.address = ip;
 		this.port = port;
@@ -63,6 +68,10 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 		this.viewDistance = viewDistance;
 		this.threads = threads;
 		this.developerMode = developer;
+		try {
+			this.icon = ImageIO.read(new File(fileIcon));
+		} catch (Exception ignored) {
+		}
 	}
 
 	public void createFile() {
@@ -77,6 +86,7 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 				config.set("view-distance", 8);
 				config.set("threads-count", Runtime.getRuntime().availableProcessors());
 				config.set("developer-mode", false);
+				config.set("icon-file-name", "server-icon.png");
 				config.save(file);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -162,6 +172,11 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 	@Override
 	public void setValue(String key, Object value) {
 		this.config.set(key, value);
+	}
+
+	@Override
+	public BufferedImage getIcon() {
+		return icon;
 	}
 
 }

@@ -153,11 +153,4 @@ public interface Server {
 	 * 
 	 */
 	public Scheduler getScheduler();
-
-	/**
-	 * Иконка сервера
-	 * 
-	 * @return image
-	 */
-	public BufferedImage getIcon();
 }
