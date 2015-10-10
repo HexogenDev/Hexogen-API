@@ -23,5 +23,6 @@ public interface PlayerManager {
 	public void sendMessageForAll(World world, String message);
 
 	public Player getPlayer(String name);
+
 	public Player getPlayer(UUID uuid);
 }
