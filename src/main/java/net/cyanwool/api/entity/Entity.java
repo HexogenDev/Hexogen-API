@@ -13,9 +13,13 @@ import net.cyanwool.api.world.chunk.Chunk;
 
 public interface Entity {
 
+	public IEntityTrackerEntry getTrackerEntry();
+
 	public Position getPosition();
 
 	public int getEntityID();
+
+	public void setEntityID(int id);
 
 	public World getWorld();
 
@@ -26,8 +30,6 @@ public interface Entity {
 	public boolean isInvisible();
 
 	public boolean onGround();
-
-	public void destroy();
 
 	public void onTick();
 
@@ -79,6 +81,4 @@ public interface Entity {
 	public List<Packet> getUpdatePackets();
 
 	public abstract List<Packet> getSpawnPackets();
-
-	public void setEntityID(int id);
 }

@@ -7,4 +7,6 @@ public interface Player extends OfflinePlayer, ICommandSender {
 
 	public PlayerNetwork getPlayerNetwork();
 
+	public void kick(String reason);
+
 }

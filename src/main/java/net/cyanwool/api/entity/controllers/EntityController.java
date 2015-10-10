@@ -10,7 +10,7 @@ public interface EntityController {
 
 	public void setEnabled(boolean flag);
 
-	public boolean needUpdate();
+	public boolean isNeedUpdate();
 
 	public void setUpdate();
 

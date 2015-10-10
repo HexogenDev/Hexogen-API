@@ -39,4 +39,8 @@ public interface ServerConfiguration {
 	public void setValue(String key, Object value);
 
 	public BufferedImage getIcon();
+
+	public int getServerCompressionThreshold();
+
+	public void setServerCompressionThreshold(int compress);
 }

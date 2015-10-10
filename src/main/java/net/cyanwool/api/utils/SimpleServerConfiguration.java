@@ -22,6 +22,7 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 
 	private File file;
 	private YamlConfiguration config;
+	private int compress;
 
 	public SimpleServerConfiguration(String configFile) {
 		this.file = new File(configFile);
@@ -59,6 +60,7 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 
 		boolean developer = config.getBoolean("developer-mode");
 		String fileIcon = config.getString("icon-file-name");
+		int compress = config.getInt("compression-threshold");
 
 		this.address = ip;
 		this.port = port;
@@ -68,6 +70,7 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 		this.viewDistance = viewDistance;
 		this.threads = threads;
 		this.developerMode = developer;
+		this.compress = compress;
 		try {
 			this.icon = ImageIO.read(new File(fileIcon));
 		} catch (Exception ignored) {
@@ -87,6 +90,7 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 				config.set("threads-count", Runtime.getRuntime().availableProcessors());
 				config.set("developer-mode", false);
 				config.set("icon-file-name", "server-icon.png");
+				config.set("compression-threshold", 100); // ??
 				config.save(file);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -177,6 +181,16 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 	@Override
 	public BufferedImage getIcon() {
 		return icon;
+	}
+
+	@Override
+	public int getServerCompressionThreshold() {
+		return compress;
+	}
+
+	@Override
+	public void setServerCompressionThreshold(int compress) {
+		this.compress = compress;
 	}
 
 }

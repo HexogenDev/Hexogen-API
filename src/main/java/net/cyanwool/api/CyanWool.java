@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 import net.cyanwool.api.command.ConsoleCommandSender;
 import net.cyanwool.api.command.ICommandManager;
 import net.cyanwool.api.entity.EntityManager;
-import net.cyanwool.api.io.IOManager;
 import net.cyanwool.api.lang.ILanguageManager;
 import net.cyanwool.api.management.OperatorsManager;
 import net.cyanwool.api.management.PlayerManager;
@@ -192,13 +191,6 @@ public class CyanWool {
 	 */
 	public ServerConfiguration getServerConfiguration() {
 		return getServer().getServerConfiguration();
-	}
-
-	/**
-	 * Менеджер для чтения/записи (Input/Output)
-	 */
-	public IOManager getIOManager() {
-		return getServer().getIOManager();
 	}
 
 	/**

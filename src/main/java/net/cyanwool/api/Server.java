@@ -1,9 +1,10 @@
 package net.cyanwool.api;
 
+import org.apache.logging.log4j.Logger;
+
 import net.cyanwool.api.command.ConsoleCommandSender;
 import net.cyanwool.api.command.ICommandManager;
 import net.cyanwool.api.entity.EntityManager;
-import net.cyanwool.api.io.IOManager;
 import net.cyanwool.api.lang.ILanguageManager;
 import net.cyanwool.api.management.OperatorsManager;
 import net.cyanwool.api.management.PlayerManager;
@@ -14,10 +15,6 @@ import net.cyanwool.api.scheduler.Scheduler;
 import net.cyanwool.api.utils.Registry;
 import net.cyanwool.api.utils.ServerConfiguration;
 import net.cyanwool.api.world.WorldManager;
-
-import java.awt.image.BufferedImage;
-
-import org.apache.logging.log4j.Logger;
 
 public interface Server {
 
@@ -138,11 +135,6 @@ public interface Server {
 	 * Настройки сервера
 	 */
 	public ServerConfiguration getServerConfiguration();
-
-	/**
-	 * Менеджер для чтения/записи (Input/Output)
-	 */
-	public IOManager getIOManager();
 
 	/**
 	 * Менеджер для работ с мирами

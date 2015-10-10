@@ -12,11 +12,11 @@ public interface PlayerManager {
 
 	// public void joinPlayer(GameProfile info);
 
-	public void spawnPlayer(Player player);
+	public void onSpawnPlayer(Player player);
 
 	// public void refreshPlayer(Player player, PlayerListEntryAction action);
 
-	public void leavePlayer(Player player);
+	public void onLeavePlayer(Player player);
 
 	public List<Player> getPlayers();
 
