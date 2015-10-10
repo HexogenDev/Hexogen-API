@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import net.cyanwool.api.entity.alive.player.Player;
 
-public interface IEntityTrackerEntry {
+public interface EntityTrackerEntry {
 
 	public Entity getEntity();
 
@@ -15,5 +15,7 @@ public interface IEntityTrackerEntry {
 	public void removeViewerPlayer(Player player);
 
 	public Collection<Player> getViewerPlayers();
+
+	public void refresh();
 
 }

@@ -18,8 +18,4 @@ public interface EntityManager {
 	public void moveToOtherPosition(Entity entity, Position pos);
 
 	public Server getServer();
-
-	public IEntityTracker getEntityTracker();
-
-	public void onUpdate();
 }

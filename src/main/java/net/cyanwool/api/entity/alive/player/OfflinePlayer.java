@@ -6,4 +6,6 @@ public interface OfflinePlayer extends EntityLivingBase {
 
 	public boolean isOnline();
 
+	public PlayerProfile getProfile();
+
 }

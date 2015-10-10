@@ -1,8 +1,10 @@
 package net.cyanwool.api.entity;
 
 import java.util.List;
+import java.util.UUID;
 
 import net.cyanwool.api.Server;
+import net.cyanwool.api.command.ICommandSender;
 import net.cyanwool.api.entity.controllers.EntityController;
 import net.cyanwool.api.entity.controllers.EntityMoveController;
 import net.cyanwool.api.network.Packet;
@@ -11,15 +13,17 @@ import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;
 import net.cyanwool.api.world.chunk.Chunk;
 
-public interface Entity {
+public interface Entity extends ICommandSender {
 
-	public IEntityTrackerEntry getTrackerEntry();
+	public EntityTrackerEntry getTrackerEntry();
 
 	public Position getPosition();
 
 	public int getEntityID();
 
 	public void setEntityID(int id);
+
+	public UUID getUUID();
 
 	public World getWorld();
 

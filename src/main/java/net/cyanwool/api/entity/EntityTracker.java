@@ -2,7 +2,7 @@ package net.cyanwool.api.entity;
 
 import java.util.Collection;
 
-public interface IEntityTracker {
+public interface EntityTracker {
 
 	public void registerEntity(Entity entity);
 
