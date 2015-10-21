@@ -9,11 +9,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import com.google.common.base.Preconditions;
+
 import net.cyanwool.api.configuration.Configuration;
 import net.cyanwool.api.configuration.InvalidConfigurationException;
 import net.cyanwool.api.configuration.MemoryConfiguration;
-
-import com.google.common.base.Preconditions;
 
 /**
  * This is a base class for all File based implementations of {@link Configuration}

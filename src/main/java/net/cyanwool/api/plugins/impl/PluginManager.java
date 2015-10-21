@@ -37,6 +37,7 @@ public class PluginManager implements IPluginManager {
 		loader = new PluginLoader(this.getClass().getClassLoader());
 	}
 
+	@Override
 	public String[] getListJars() {
 		return moduleFolder.list(new FilenameFilter() {
 			@Override
@@ -46,6 +47,7 @@ public class PluginManager implements IPluginManager {
 		});
 	}
 
+	@Override
 	public void loadPlugins() {
 		String[] jarList = getListJars();
 
@@ -55,6 +57,7 @@ public class PluginManager implements IPluginManager {
 		}
 	}
 
+	@Override
 	public IPlugin getPlugin(String name) {
 		for (IPlugin module : plugins) {
 			if (module.getDescription().getName().equals(name)) {

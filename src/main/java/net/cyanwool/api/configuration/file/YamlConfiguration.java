@@ -9,17 +9,17 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import net.cyanwool.api.CyanWool;
-import net.cyanwool.api.configuration.Configuration;
-import net.cyanwool.api.configuration.ConfigurationSection;
-import net.cyanwool.api.configuration.InvalidConfigurationException;
-
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.error.YAMLException;
 import org.yaml.snakeyaml.representer.Representer;
 
 import com.google.common.base.Preconditions;
+
+import net.cyanwool.api.CyanWool;
+import net.cyanwool.api.configuration.Configuration;
+import net.cyanwool.api.configuration.ConfigurationSection;
+import net.cyanwool.api.configuration.InvalidConfigurationException;
 
 /**
  * An implementation of {@link Configuration} which saves all files in Yaml. Note that this implementation is not synchronized.

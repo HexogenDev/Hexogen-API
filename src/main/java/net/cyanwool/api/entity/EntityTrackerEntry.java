@@ -3,12 +3,11 @@ package net.cyanwool.api.entity;
 import java.util.Collection;
 
 import net.cyanwool.api.entity.alive.player.Player;
+import net.cyanwool.api.world.Position;
 
 public interface EntityTrackerEntry {
 
 	public Entity getEntity();
-
-	public void onUpdate();
 
 	public void addViewerPlayer(Player player);
 
@@ -16,6 +15,12 @@ public interface EntityTrackerEntry {
 
 	public Collection<Player> getViewerPlayers();
 
-	public void refresh();
+	public void update();
+
+	public void update(Collection<Player> players);
+
+	public void updatePlayerEntity(Player player);
+
+	public boolean checkDistance(Position pos);
 
 }

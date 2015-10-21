@@ -12,23 +12,29 @@ public class Plugin implements IPlugin {
 	private boolean enabled;
 	private PluginLogger logger;
 
+	@Override
 	public void onEnable() {
 	}
 
+	@Override
 	public void onLoad() {
 	}
 
+	@Override
 	public void onDisable() {
 	}
 
+	@Override
 	public Server getServer() {
 		return CyanWool.getServer();
 	}
 
+	@Override
 	public PluginLogger getLogger() {
 		return logger;
 	}
 
+	@Override
 	public IPluginDescription getDescription() {
 		return description;
 	}
@@ -41,6 +47,7 @@ public class Plugin implements IPlugin {
 		return result;
 	}
 
+	@Override
 	public void init(IPluginDescription description) {
 		this.description = description;
 		this.logger = new PluginLogger(this);

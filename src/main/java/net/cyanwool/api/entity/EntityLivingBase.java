@@ -29,7 +29,7 @@ public interface EntityLivingBase extends Entity {
 
 	public double getMaxHealth();
 
-	public void settMaxHealth(double maxHealth);
+	public void setMaxHealth(double maxHealth);
 
 	public void setTarget(EntityLivingBase entity);
 

@@ -20,6 +20,7 @@ public enum LivingEntityType implements EntityType {
 		this.name = name;
 	}
 
+	@Override
 	public int getId() {
 		return id;
 	}

@@ -3,12 +3,12 @@ package net.cyanwool.api.configuration.file;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.yaml.snakeyaml.nodes.Node;
+import org.yaml.snakeyaml.representer.Representer;
+
 import net.cyanwool.api.configuration.ConfigurationSection;
 import net.cyanwool.api.configuration.serialization.ConfigurationSerializable;
 import net.cyanwool.api.configuration.serialization.ConfigurationSerialization;
-
-import org.yaml.snakeyaml.nodes.Node;
-import org.yaml.snakeyaml.representer.Representer;
 
 public class YamlRepresenter extends Representer {
 

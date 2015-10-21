@@ -22,6 +22,7 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 		this.parent = parent;
 	}
 
+	@Override
 	public IPluginDescription loadPlugin(String pluginPath) throws InvalidPluginException {
 		JarFile pluginJar = null;
 		InputStream inputStream = null;

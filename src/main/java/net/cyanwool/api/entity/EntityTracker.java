@@ -1,6 +1,6 @@
 package net.cyanwool.api.entity;
 
-import java.util.Collection;
+import java.util.Map;
 
 public interface EntityTracker {
 
@@ -10,6 +10,6 @@ public interface EntityTracker {
 
 	public void onUpdate();
 
-	public Collection<Entity> getRegisteredEntities();
+	public Map<Integer, Entity> getMapTrackedEntities();
 
 }

@@ -22,22 +22,27 @@ public class PluginDescription implements IPluginDescription {
 		this.main = main;
 	}
 
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public List<String> getDevelopers() {
 		return developers;
 	}
 
+	@Override
 	public String getVersion() {
 		return version;
 	}
 
+	@Override
 	public String getDescription() {
 		return description;
 	}
 
+	@Override
 	public String getMain() {
 		return main;
 	}

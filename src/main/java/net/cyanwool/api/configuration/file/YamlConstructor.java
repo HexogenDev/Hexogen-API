@@ -3,12 +3,12 @@ package net.cyanwool.api.configuration.file;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import net.cyanwool.api.configuration.serialization.ConfigurationSerialization;
-
 import org.yaml.snakeyaml.constructor.SafeConstructor;
 import org.yaml.snakeyaml.error.YAMLException;
 import org.yaml.snakeyaml.nodes.Node;
 import org.yaml.snakeyaml.nodes.Tag;
+
+import net.cyanwool.api.configuration.serialization.ConfigurationSerialization;
 
 public class YamlConstructor extends SafeConstructor {
 

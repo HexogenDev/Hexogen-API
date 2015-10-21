@@ -59,6 +59,7 @@ public interface Entity extends ICommandSender {
 
 	public boolean canSeePosition(Position pos);
 
+	@Override
 	public Server getServer();
 
 	public Rotation getBodyRotation();
