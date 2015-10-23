@@ -7,7 +7,7 @@ import net.cyanwool.api.Server;
 import net.cyanwool.api.command.ICommandSender;
 import net.cyanwool.api.entity.controllers.EntityController;
 import net.cyanwool.api.entity.controllers.EntityMoveController;
-import net.cyanwool.api.network.Packet;
+import net.cyanwool.api.network.IPacket;
 import net.cyanwool.api.utils.Rotation;
 import net.cyanwool.api.world.Position;
 import net.cyanwool.api.world.World;
@@ -16,8 +16,18 @@ import net.cyanwool.api.world.chunk.Chunk;
 public interface Entity extends ICommandSender {
 
 	public EntityTrackerEntry getTrackerEntry();
+	
+	public boolean isTeleported();
+	
+	public boolean isMoved();
+	
+	public boolean isRotated();
 
+	public boolean isValid();
+	
 	public Position getPosition();
+	
+	public Position getPreviousPosition();
 
 	public int getEntityID();
 
@@ -83,7 +93,7 @@ public interface Entity extends ICommandSender {
 
 	// public CompoundTag getCompoundTag();
 
-	public List<Packet> getUpdatePackets();
+	public List<IPacket> getUpdatePackets();
 
-	public abstract List<Packet> getSpawnPackets();
+	public abstract List<IPacket> getSpawnPackets();
 }

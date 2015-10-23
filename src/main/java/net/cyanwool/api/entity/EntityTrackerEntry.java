@@ -23,4 +23,6 @@ public interface EntityTrackerEntry {
 
 	public boolean checkDistance(Position pos);
 
+	public void destroy();
+
 }

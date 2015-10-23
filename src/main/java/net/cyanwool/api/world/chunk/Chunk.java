@@ -60,4 +60,8 @@ public interface Chunk {
 	public boolean isLoaded();
 
 	public World getWorld();
+
+	public int getWidth();
+
+	public int getHeight();
 }

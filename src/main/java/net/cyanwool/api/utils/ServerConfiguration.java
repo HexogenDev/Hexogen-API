@@ -22,9 +22,9 @@ public interface ServerConfiguration {
 
 	public void setMotd(String motd);
 
-	public int getRadiusViewDistance();
+	public int getViewDistance();
 
-	public void setRadiusViewDistance(int view);
+	public void setViewDistance(int view);
 
 	public int getCountThreads();
 

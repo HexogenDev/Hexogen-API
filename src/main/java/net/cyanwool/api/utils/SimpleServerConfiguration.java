@@ -139,12 +139,12 @@ public class SimpleServerConfiguration implements ServerConfiguration {
 	}
 
 	@Override
-	public int getRadiusViewDistance() {
+	public int getViewDistance() {
 		return viewDistance;
 	}
 
 	@Override
-	public void setRadiusViewDistance(int view) {
+	public void setViewDistance(int view) {
 		this.viewDistance = view;
 	}
 

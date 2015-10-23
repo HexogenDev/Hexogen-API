@@ -1,11 +1,12 @@
 package net.cyanwool.api.network;
 
+import net.cyanwool.api.Server;
 import net.cyanwool.api.entity.alive.player.Player;
 import net.cyanwool.api.world.Position;
 
 public interface NetworkServer {
 
-	public net.cyanwool.api.Server getServer();
+	public Server getServer();
 
 	public Object getProtocolServer();
 
@@ -13,13 +14,13 @@ public interface NetworkServer {
 
 	public String getHostAddress();
 
-	public void sendPacketForAll(Packet packet);
+	public void sendPacketForAll(IPacket packet);
 
-	public void sendPacketDistance(Position pos, Packet packet, int radius);
+	public void sendPacketDistance(Position pos, IPacket packet, int radius);
 
-	public void sendPacketForAllExpect(Packet packet, Player expect);
+	public void sendPacketForAllExpect(IPacket packet, Player expect);
 
-	public void sendPacketDistanceExpect(Position pos, Packet packet, int radius, Player expect);
+	public void sendPacketDistanceExpect(Position pos, IPacket packet, int radius, Player expect);
 
 	public void shutdown();
 

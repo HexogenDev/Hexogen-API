@@ -10,6 +10,6 @@ public interface EntityTracker {
 
 	public void onUpdate();
 
-	public Map<Integer, Entity> getMapTrackedEntities();
+	public Map<Integer, EntityTrackerEntry> getMapTrackedEntities();
 
 }
