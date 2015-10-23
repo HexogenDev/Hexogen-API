@@ -17,6 +17,8 @@ public interface Entity extends ICommandSender {
 
 	public EntityTrackerEntry getTrackerEntry();
 
+	public void applyMetadata();
+
 	public boolean isTeleported();
 
 	public boolean isMoved();
@@ -24,6 +26,14 @@ public interface Entity extends ICommandSender {
 	public boolean isRotated();
 
 	public boolean isValid();
+
+	public boolean isSneaking();
+
+	public void setSneaking(boolean flag);
+
+	public boolean isSprinting();
+
+	public void setSprinting(boolean flag);
 
 	public Position getPosition();
 
@@ -75,14 +85,6 @@ public interface Entity extends ICommandSender {
 	public Rotation getBodyRotation();
 
 	public void setBodyRotation(Rotation rotation);
-
-	public EntityController getEntityController(String name);
-
-	public void addEntityController(EntityController controller);
-
-	public void removeEntityController(EntityController controller);
-
-	public void removeEntityController(String name);
 
 	public EntityMoveController getMoveController();
 
