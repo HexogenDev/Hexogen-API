@@ -16,17 +16,17 @@ import net.cyanwool.api.world.chunk.Chunk;
 public interface Entity extends ICommandSender {
 
 	public EntityTrackerEntry getTrackerEntry();
-	
+
 	public boolean isTeleported();
-	
+
 	public boolean isMoved();
-	
+
 	public boolean isRotated();
 
 	public boolean isValid();
-	
+
 	public Position getPosition();
-	
+
 	public Position getPreviousPosition();
 
 	public int getEntityID();
