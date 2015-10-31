@@ -16,6 +16,7 @@ public class BlockMaterial extends ItemMaterial {
 	private Sound stepSound;
 	private Sound placeSound;
 	private Sound breakSound;
+	protected boolean solid;
 
 	public BlockMaterial(Material material) {
 		super(material.getStringId(), material.getId());
@@ -90,5 +91,13 @@ public class BlockMaterial extends ItemMaterial {
 
 	public boolean canPlaceBlockAt(World worldIn, Position pos) {
 		return true;
+	}
+
+	public boolean isSolid() {
+		return solid;
+	}
+
+	protected void setSolid(boolean flag) {
+		this.solid = flag;
 	}
 }
