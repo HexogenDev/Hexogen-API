@@ -10,4 +10,5 @@ public interface ILanguageFile {
 
 	public String getLocaleCode();
 
+	public void save();
 }

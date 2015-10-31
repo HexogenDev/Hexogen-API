@@ -145,4 +145,9 @@ public interface Server {
 	 * 
 	 */
 	public Scheduler getScheduler();
+	
+	/**
+	 * 
+	 */
+	public PlatformType getPlatformType();
 }
