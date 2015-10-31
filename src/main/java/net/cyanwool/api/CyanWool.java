@@ -14,6 +14,7 @@ import net.cyanwool.api.plugins.IPluginManager;
 import net.cyanwool.api.scheduler.Scheduler;
 import net.cyanwool.api.utils.Registry;
 import net.cyanwool.api.utils.ServerConfiguration;
+import net.cyanwool.api.world.WorldManager;
 
 public class CyanWool {
 
@@ -173,7 +174,7 @@ public class CyanWool {
 	 * 
 	 * @return
 	 */
-	public ICommandManager getCommandManager() {
+	public static ICommandManager getCommandManager() {
 		return getServer().getCommandManager();
 	}
 
@@ -182,21 +183,35 @@ public class CyanWool {
 	 * 
 	 * @return
 	 */
-	public ConsoleCommandSender getConsoleCommandSender() {
+	public static ConsoleCommandSender getConsoleCommandSender() {
 		return getServer().getConsoleCommandSender();
 	}
 
 	/**
 	 * Настройки сервера
 	 */
-	public ServerConfiguration getServerConfiguration() {
+	public static ServerConfiguration getServerConfiguration() {
 		return getServer().getServerConfiguration();
+	}
+
+	/**
+	 * Менеджер для работ с мирами
+	 */
+	public static WorldManager getWorldManager() {
+		return getServer().getWorldManager();
 	}
 
 	/**
 	 * 
 	 */
-	public Scheduler getScheduler() {
+	public static Scheduler getScheduler() {
 		return getServer().getScheduler();
+	}
+	
+	/**
+	 * 
+	 */
+	public static PlatformType getPlatformType(){
+		return getServer().getPlatformType();
 	}
 }
