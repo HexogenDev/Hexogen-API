@@ -1,0 +1,217 @@
+package net.hexogendev.api;
+
+import org.apache.logging.log4j.Logger;
+
+import net.hexogendev.api.command.ConsoleCommandSender;
+import net.hexogendev.api.command.ICommandManager;
+import net.hexogendev.api.entity.EntityManager;
+import net.hexogendev.api.lang.ILanguageManager;
+import net.hexogendev.api.management.OperatorsManager;
+import net.hexogendev.api.management.PlayerManager;
+import net.hexogendev.api.management.WhitelistManager;
+import net.hexogendev.api.network.NetworkServer;
+import net.hexogendev.api.plugins.IPluginManager;
+import net.hexogendev.api.scheduler.Scheduler;
+import net.hexogendev.api.utils.Registry;
+import net.hexogendev.api.utils.ServerConfiguration;
+import net.hexogendev.api.world.WorldManager;
+
+public class Hexogen {
+
+	private static Server server;
+
+	/**
+	 * 
+	 * Инициализация сервера
+	 * 
+	 * @param init
+	 *            - Сервер
+	 */
+	public static void initServer(Server init) {
+		if (getServer() != null) {
+			server.getLogger().warn("Cannot redefine singleton Server");
+			return;
+		}
+		server = init;
+		getServer().getLogger().info("Starting minecraft server " + getServer().getModName() + " (Minecraft Version: " + getServer().getMCVersion() + ")");
+		getServer().start();
+	}
+
+	/**
+	 * Возвращает сервер
+	 * 
+	 * @return Сервер
+	 */
+	public static Server getServer() {
+		return server;
+	}
+
+	/**
+	 * 
+	 * Название реализационого сервера
+	 * 
+	 * @return Название
+	 */
+	public static String getModName() {
+		return getServer().getModName();
+	}
+
+	/**
+	 * Версия Minecraft
+	 * 
+	 * @return Версия
+	 */
+	public static String getMCVersion() {
+		return getServer().getMCVersion();
+	}
+
+	/**
+	 * Тип реализации (Например: Standalone или Platform)
+	 * 
+	 * @return ImplementationType
+	 */
+	public static ImplementationType getImplementationType() {
+		return getServer().getImplementationType();
+	}
+
+	/**
+	 * Возвращает логгер
+	 * 
+	 * @return Логгер из org.apache.logging.log4j
+	 */
+	public static Logger getLogger() {
+		return getServer().getLogger();
+	}
+
+	/**
+	 * Менеджер белого списка
+	 * 
+	 * @return
+	 */
+	public static WhitelistManager getWhitelistManager() {
+		return getServer().getWhitelistManager();
+	}
+
+	/**
+	 * Менеджер операторов
+	 * 
+	 * @return
+	 */
+	public static OperatorsManager getOperatorsManager() {
+		return getServer().getOperatorsManager();
+	}
+
+	/**
+	 * Менеджер для создания класса игрока и его взаимнодействия. Например заход игрока на сервер.
+	 * 
+	 * @return
+	 */
+	public static PlayerManager getPlayerManager() {
+		return getServer().getPlayerManager();
+	}
+
+	/**
+	 * Сервер для обработки с пакетами.
+	 * 
+	 * @return
+	 */
+	public static NetworkServer getNetworkServer() {
+		return getServer().getNetworkServer();
+	}
+
+	/**
+	 * Менеджер для регистрации/удаления сущностей.
+	 * 
+	 * @return
+	 */
+	public static EntityManager getEntityManager() {
+		return getServer().getEntityManager();
+	}
+
+	/**
+	 * Отправить сообщение в глобальный чат (В том числе сервер).
+	 * 
+	 * @param message
+	 *            - Сообщение
+	 */
+	public static void broadcastMessage(String message) {
+		getServer().broadcastMessage(message);
+	}
+
+	/**
+	 * Выключить сервер с сообщением
+	 * 
+	 * @param message
+	 *            - Сообщение
+	 */
+	public static void shutdown(String message) {
+		getServer().shutdown(message);
+	}
+
+	/**
+	 * Менеджер языковых пакетов
+	 */
+	public static ILanguageManager getLanguageManager() {
+		return getServer().getLanguageManager();
+	}
+
+	/**
+	 * Регистратор блоков и предметов
+	 */
+	public static Registry getRegistry() {
+		return getServer().getRegistry();
+	}
+
+	/**
+	 * Менеджер для регистрации плагинов
+	 */
+	public static IPluginManager getPluginManager() {
+		return getServer().getPluginManager();
+	}
+
+	/**
+	 * Менеджер для регистрации/удаления команд
+	 * 
+	 * @return
+	 */
+	public static ICommandManager getCommandManager() {
+		return getServer().getCommandManager();
+	}
+
+	/**
+	 * Консоль
+	 * 
+	 * @return
+	 */
+	public static ConsoleCommandSender getConsoleCommandSender() {
+		return getServer().getConsoleCommandSender();
+	}
+
+	/**
+	 * Настройки сервера
+	 */
+	public static ServerConfiguration getServerConfiguration() {
+		return getServer().getServerConfiguration();
+	}
+
+	/**
+	 * Менеджер для работ с мирами
+	 */
+	public static WorldManager getWorldManager() {
+		return getServer().getWorldManager();
+	}
+
+	/**
+	 * 
+	 */
+	public static Scheduler getScheduler() {
+		return getServer().getScheduler();
+	}
+
+	/**
+	 * 
+	 */
+	public static Side getSide() {
+		return getServer().getSide();
+	}
+}

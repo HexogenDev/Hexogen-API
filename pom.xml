@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.cyanwool</groupId>
-	<artifactId>CyanWoolAPI</artifactId>
+	<groupId>net.hexogendev</groupId>
+	<artifactId>HexogenAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>CyanWoolAPI</name>
+	<name>HexogenAPI</name>
 	<url>http://maven.apache.org</url>
 
 	<licenses>
@@ -61,7 +61,6 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
-	<description>CyanWool API</description>
 
 	<build>
 		<defaultGoal>clean install</defaultGoal>
@@ -126,4 +125,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>Experimental API server for Minecraft game!</description>
 </project>
