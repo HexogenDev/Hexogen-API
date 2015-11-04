@@ -25,7 +25,7 @@ public class InfoCommand implements ICommand {
 		// for (String message : list) {
 		// sender.sendMessage(message);
 		// }
-		String text = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.aboutServer");
+		String text = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("system.aboutServer");
 		text = ReplacerManager.replace(text, sender);
 		sender.sendMessage(text);
 	}

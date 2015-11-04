@@ -16,7 +16,7 @@ public class PluginsCommand implements ICommand {
 
 	@Override
 	public void execute(ICommandSender sender, String[] args) {
-		String pluginLang = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.installedPlugins");
+		String pluginLang = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("system.installedPlugins");
 		Collection<IPlugin> pluginList = Hexogen.getPluginManager().getPlugins();
 
 		String msg = ChatColor.AQUA + pluginLang + ChatColor.WHITE + " (" + pluginList.size() + "): ";

@@ -13,7 +13,7 @@ public class ShutdownCommand implements ICommand {
 
 	@Override
 	public void execute(ICommandSender sender, String[] args) {
-		String text = sender.getServer().getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.shutdown");
+		String text = sender.getServer().getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("system.shutdown");
 		if (args.length >= 1) {
 			if (args[0] != null) {
 				text = args[0];
