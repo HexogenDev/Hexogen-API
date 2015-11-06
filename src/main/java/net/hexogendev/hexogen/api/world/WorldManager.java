@@ -10,7 +10,7 @@ public interface WorldManager {
 
 	public List<World> getWorlds();
 
-	public boolean addWorld(String name);
+	public boolean addWorld(String folderName, String name);
 
 	public World getWorld(String name);
 
