@@ -3,6 +3,7 @@ package net.hexogendev.hexogen.api.network;
 import net.hexogendev.hexogen.api.Server;
 import net.hexogendev.hexogen.api.entity.alive.player.Player;
 import net.hexogendev.hexogen.api.world.Position;
+import net.hexogendev.hexogen.api.world.World;
 
 public interface NetworkServer {
 
@@ -16,9 +17,13 @@ public interface NetworkServer {
 
 	public void sendPacketForAll(IPacket packet);
 
-	public void sendPacketDistance(Position pos, IPacket packet, int radius);
+	public void sendPacketForAll(World world, IPacket packet);
 
 	public void sendPacketForAllExpect(IPacket packet, Player expect);
+
+	public void sendPacketForAllExpect(World world, IPacket packet, Player expect);
+
+	public void sendPacketDistance(Position pos, IPacket packet, int radius);
 
 	public void sendPacketDistanceExpect(Position pos, IPacket packet, int radius, Player expect);
 
