@@ -19,12 +19,16 @@ public interface World {
 	public boolean isLoadedSpawnChunks();
 
 	public void loadSpawnChunks();
+	
+	public boolean isKeepSpawnChunksInMemory();
+	
+	public void setKeepSpawnChunksInMemory(boolean flag);
 
 	public WorldInfo getWorldInfo();
 
-	public void setBlock(Position pos, int id, int data);
+	public void setBlock(Position pos, String prefix, int id, int data);
 
-	public void setBlock(int x, int y, int z, int id, int data);
+	public void setBlock(int x, int y, int z, String prefix, int id, int data);
 
 	public void setBlock(Position pos, BlockMaterial type);
 
@@ -38,13 +42,9 @@ public interface World {
 
 	public void setSpawnPosition(Position pos);
 
-	public void playSoundAtEntity(Entity baseEntity, String sound, float volume, float pitch);
-
 	public void playSound(Position pos, String sound, float volume, float pitch);
 
 	public void playSoundExpect(Position pos, String sound, float volume, float pitch, Player player);
-
-	public void playSoundAtEntity(Entity baseEntity, Sound sound, float volume, float pitch);
 
 	public void playSound(Position pos, Sound sound, float volume, float pitch);
 
