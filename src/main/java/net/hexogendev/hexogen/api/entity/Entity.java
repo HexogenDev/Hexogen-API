@@ -7,6 +7,7 @@ import net.hexogendev.hexogen.api.Server;
 import net.hexogendev.hexogen.api.command.ICommandSender;
 import net.hexogendev.hexogen.api.entity.controllers.EntityMoveController;
 import net.hexogendev.hexogen.api.network.IPacket;
+import net.hexogendev.hexogen.api.storage.EntityStorage;
 import net.hexogendev.hexogen.api.utils.Rotation;
 import net.hexogendev.hexogen.api.world.Position;
 import net.hexogendev.hexogen.api.world.World;
@@ -38,9 +39,9 @@ public interface Entity extends ICommandSender {
 
 	public Position getPreviousPosition();
 
-	public int getEntityID();
+	public int getID();
 
-	public void setEntityID(int id);
+	public void setID(int id);
 
 	public UUID getUUID();
 
@@ -97,4 +98,8 @@ public interface Entity extends ICommandSender {
 	public List<IPacket> getUpdatePackets();
 
 	public abstract List<IPacket> getSpawnPackets();
+
+	public EntityStorage getStorage();
+
+	public void loadStorage(EntityStorage storage);
 }

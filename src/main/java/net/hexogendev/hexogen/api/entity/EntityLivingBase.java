@@ -2,6 +2,7 @@ package net.hexogendev.hexogen.api.entity;
 
 import net.hexogendev.hexogen.api.entity.controllers.EntityJumpController;
 import net.hexogendev.hexogen.api.entity.controllers.EntityLookController;
+import net.hexogendev.hexogen.api.storage.EntityLivingStorage;
 import net.hexogendev.hexogen.api.utils.DamageSource;
 import net.hexogendev.hexogen.api.utils.Rotation;
 import net.hexogendev.hexogen.api.world.Position;
@@ -86,4 +87,8 @@ public interface EntityLivingBase extends Entity {
 
 	public void onInteractEntity(EntityLivingBase interacter);
 
+	@Override
+	public EntityLivingStorage getStorage();
+
+	public void loadStorage(EntityLivingStorage storage);
 }
