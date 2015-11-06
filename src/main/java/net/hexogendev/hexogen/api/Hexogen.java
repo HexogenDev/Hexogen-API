@@ -12,6 +12,7 @@ import net.hexogendev.hexogen.api.management.WhitelistManager;
 import net.hexogendev.hexogen.api.network.NetworkServer;
 import net.hexogendev.hexogen.api.plugins.IPluginManager;
 import net.hexogendev.hexogen.api.scheduler.Scheduler;
+import net.hexogendev.hexogen.api.storage.StorageManager;
 import net.hexogendev.hexogen.api.utils.Registry;
 import net.hexogendev.hexogen.api.utils.ServerConfiguration;
 import net.hexogendev.hexogen.api.world.WorldManager;
@@ -213,5 +214,12 @@ public class Hexogen {
 	 */
 	public static Side getSide() {
 		return getServer().getSide();
+	}
+	
+	/**
+	 * 
+	 */
+	public StorageManager getStorageManager(){
+		return getServer().getStorageManager();
 	}
 }
