@@ -31,6 +31,7 @@ public class EnvironmentGenFlat extends EnvironmentGenBase {
 		return chunk;
 	}
 
+	@Override
 	public List<BlockPopulator> getPopulators() {
 		List<BlockPopulator> list = super.getPopulators();
 		list.add(new TestPopulator());

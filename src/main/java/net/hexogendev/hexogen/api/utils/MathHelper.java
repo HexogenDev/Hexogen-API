@@ -26,7 +26,7 @@ public class MathHelper {
 
 	public static int floor_float(float f) {
 		int i = (int) f;
-		return f >= (float) i ? i : i - 1;
+		return f >= i ? i : i - 1;
 	}
 
 	public static int func_40346_b(double d) {
@@ -35,12 +35,12 @@ public class MathHelper {
 
 	public static int floor_double(double d) {
 		int i = (int) d;
-		return d >= (double) i ? i : i - 1;
+		return d >= i ? i : i - 1;
 	}
 
 	public static long floor_double_long(double d) {
 		long l = (long) d;
-		return d >= (double) l ? l : l - 1L;
+		return d >= l ? l : l - 1L;
 	}
 
 	public static float abs(float f) {
@@ -95,7 +95,7 @@ public class MathHelper {
 	static {
 		SIN_TABLE = new float[0x10000];
 		for (int i = 0; i < 0x10000; i++) {
-			SIN_TABLE[i] = (float) Math.sin(((double) i * 3.1415926535897931D * 2D) / 65536D);
+			SIN_TABLE[i] = (float) Math.sin((i * 3.1415926535897931D * 2D) / 65536D);
 		}
 	}
 }

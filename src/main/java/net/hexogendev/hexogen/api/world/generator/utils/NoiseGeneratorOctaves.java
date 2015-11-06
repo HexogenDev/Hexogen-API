@@ -26,9 +26,9 @@ public class NoiseGeneratorOctaves extends NoiseGenerator {
 		}
 		double d3 = 1.0D;
 		for (int l1 = 0; l1 < octaves; l1++) {
-			double d4 = (double) i * d3 * d;
-			double d5 = (double) j * d3 * d1;
-			double d6 = (double) k * d3 * d2;
+			double d4 = i * d3 * d;
+			double d5 = j * d3 * d1;
+			double d6 = k * d3 * d2;
 			long l2 = MathHelper.floor_double_long(d4);
 			long l3 = MathHelper.floor_double_long(d6);
 			d4 -= l2;

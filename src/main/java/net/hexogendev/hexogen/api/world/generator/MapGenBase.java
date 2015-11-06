@@ -46,8 +46,8 @@ public class MapGenBase {
 		long l1 = rand.nextLong();
 		for (int i1 = i - k; i1 <= i + k; i1++) {
 			for (int j1 = j - k; j1 <= j + k; j1++) {
-				long l2 = (long) i1 * l;
-				long l3 = (long) j1 * l1;
+				long l2 = i1 * l;
+				long l3 = j1 * l1;
 				rand.setSeed(l2 ^ l3 ^ world.getWorldInfo().getSeed());
 				abyte0 = recursiveGenerate(world, i1, j1, i, j, abyte0);
 
