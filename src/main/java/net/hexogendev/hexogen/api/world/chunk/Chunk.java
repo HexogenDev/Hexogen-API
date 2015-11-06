@@ -64,4 +64,8 @@ public interface Chunk {
 	public int getWidth();
 
 	public int getHeight();
+
+	public void setKeepInMemory(boolean flag);
+	
+	public boolean isKeepInMemory();
 }
