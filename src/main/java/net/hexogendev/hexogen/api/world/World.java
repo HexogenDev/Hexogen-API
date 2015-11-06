@@ -6,6 +6,7 @@ import net.hexogendev.hexogen.api.Server;
 import net.hexogendev.hexogen.api.block.Block;
 import net.hexogendev.hexogen.api.entity.Entity;
 import net.hexogendev.hexogen.api.entity.EntityLivingBase;
+import net.hexogendev.hexogen.api.entity.EntityTracker;
 import net.hexogendev.hexogen.api.entity.alive.player.Player;
 import net.hexogendev.hexogen.api.material.blocks.BlockMaterial;
 import net.hexogendev.hexogen.api.world.chunk.ChunkManager;
@@ -57,6 +58,8 @@ public interface World {
 	public void playParticle(Position pos, Particle particle, int amount, int data);
 
 	public void playParticleExpect(Position pos, Particle particle, int amount, int data, Player player);
+	
+	public EntityTracker getEntityTracker();
 
 	public Entity spawnEntity(String id, Position pos);
 
