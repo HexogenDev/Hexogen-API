@@ -155,7 +155,7 @@ public interface Server {
 	 * 
 	 */
 	public Side getSide();
-	
+
 	/**
 	 * 
 	 */

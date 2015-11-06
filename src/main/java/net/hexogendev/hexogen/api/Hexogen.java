@@ -215,11 +215,11 @@ public class Hexogen {
 	public static Side getSide() {
 		return getServer().getSide();
 	}
-	
+
 	/**
 	 * 
 	 */
-	public StorageManager getStorageManager(){
+	public StorageManager getStorageManager() {
 		return getServer().getStorageManager();
 	}
 }

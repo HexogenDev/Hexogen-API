@@ -66,6 +66,6 @@ public interface Chunk {
 	public int getHeight();
 
 	public void setKeepInMemory(boolean flag);
-	
+
 	public boolean isKeepInMemory();
 }

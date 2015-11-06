@@ -19,9 +19,9 @@ public interface World {
 	public boolean isLoadedSpawnChunks();
 
 	public void loadSpawnChunks();
-	
+
 	public boolean isKeepSpawnChunksInMemory();
-	
+
 	public void setKeepSpawnChunksInMemory(boolean flag);
 
 	public WorldInfo getWorldInfo();
