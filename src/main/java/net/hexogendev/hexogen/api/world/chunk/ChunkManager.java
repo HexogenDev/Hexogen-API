@@ -15,7 +15,7 @@ public interface ChunkManager {
 
 	public boolean isChunkInUse(int x, int z);
 
-	public boolean loadChunk(int x, int z);
+	public Chunk loadChunk(int x, int z);
 
 	public void unloadChunk(Chunk chunk);
 
