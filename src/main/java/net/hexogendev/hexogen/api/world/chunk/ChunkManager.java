@@ -34,4 +34,6 @@ public interface ChunkManager {
 	public EnvironmentGenBase getEnvironmentGenerator();
 
 	public void setEnvironmentGenerator(EnvironmentGenBase gen);
+
+	public void unloadAllChunks();
 }

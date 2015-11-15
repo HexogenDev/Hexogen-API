@@ -77,4 +77,35 @@ public class ItemStack {
 	public void setNeedUpdate() {
 		this.update = true;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + amount;
+		result = prime * result + durability;
+		result = prime * result + ((itemType == null) ? 0 : itemType.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ItemStack other = (ItemStack) obj;
+		if (amount != other.amount)
+			return false;
+		if (durability != other.durability)
+			return false;
+		if (itemType == null) {
+			if (other.itemType != null)
+				return false;
+		} else if (!itemType.equals(other.itemType))
+			return false;
+		return true;
+	}
 }

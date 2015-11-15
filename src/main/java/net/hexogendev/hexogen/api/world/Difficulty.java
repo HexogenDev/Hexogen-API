@@ -14,7 +14,7 @@ public enum Difficulty {
 		return id;
 	}
 
-	public Difficulty getDifficulty(int id) {
+	public static Difficulty getDifficulty(int id) {
 		switch (id) {
 			case 0:
 				return PEACEFUL;
