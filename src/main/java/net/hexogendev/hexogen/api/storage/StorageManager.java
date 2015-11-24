@@ -9,6 +9,6 @@ public interface StorageManager {
 	public World readWorld(String folderName, String worldName);
 
 	public void saveWorld(World world);
-	
+
 	public Chunk readChunk(WorldInfo info, int x, int z);
 }

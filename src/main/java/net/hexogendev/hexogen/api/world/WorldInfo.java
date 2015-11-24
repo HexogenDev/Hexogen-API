@@ -93,5 +93,5 @@ public class WorldInfo {
 			return false;
 		return true;
 	}
-	
+
 }

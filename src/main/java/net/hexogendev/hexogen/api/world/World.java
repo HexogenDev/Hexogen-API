@@ -58,7 +58,7 @@ public interface World {
 	public void playParticle(Position pos, Particle particle, int amount, int data);
 
 	public void playParticleExpect(Position pos, Particle particle, int amount, int data, Player player);
-	
+
 	public EntityTracker getEntityTracker();
 
 	public Entity spawnEntity(String id, Position pos);

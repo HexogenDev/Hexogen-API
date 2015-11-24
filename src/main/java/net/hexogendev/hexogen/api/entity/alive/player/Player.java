@@ -17,7 +17,7 @@ public interface Player extends OfflinePlayer {
 	public void playSound(Position pos, Sound sound, float volume, float pitch);
 
 	public void playEffect(Position pos, Effect effect, int data);
-	
+
 	public void playParticle(Position pos, Particle particle, int amount, int data);
 
 	public void setTime(long worldTime);
