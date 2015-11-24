@@ -12,12 +12,14 @@ public class PluginDescription implements IPluginDescription {
 	private String description;
 	private List<String> depends;
 	private String main;
+	private int minimumAPI;
 
-	public PluginDescription(String name, String main, List<String> developers, String version, String description, List<String> depends) {
+	public PluginDescription(String name, String main, List<String> developers, String version, String description, int minimumAPI, List<String> depends) {
 		this.name = name;
 		this.developers = developers;
 		this.version = version;
 		this.description = description;
+		this.minimumAPI = minimumAPI;
 		this.depends = depends;
 		this.main = main;
 	}
@@ -50,5 +52,10 @@ public class PluginDescription implements IPluginDescription {
 	@Override
 	public List<String> getDependPlugins() {
 		return depends;
+	}
+
+	@Override
+	public int getMinimumAPIVersion() {
+		return minimumAPI;
 	}
 }

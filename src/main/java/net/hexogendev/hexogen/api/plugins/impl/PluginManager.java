@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import net.hexogendev.hexogen.api.Build;
 import net.hexogendev.hexogen.api.Server;
 import net.hexogendev.hexogen.api.plugins.IPlugin;
 import net.hexogendev.hexogen.api.plugins.IPluginDescription;
@@ -76,6 +77,18 @@ public class PluginManager implements IPluginManager {
 	public void loadPlugin(String JarFileName) {
 		try {
 			IPluginDescription pluginInfo = loader.loadPlugin(moduleFolder.getPath() + File.separator + JarFileName);
+
+			// Check minimum version of API
+			String warnMessage = "Warning! ";
+			if (pluginInfo.getMinimumAPIVersion() > Build.CURRENT_VERSION) {
+				warnMessage = warnMessage + "Your API level does not meet the minimum level to run this plugin. Your API version " + Build.CURRENT_VERSION + " (" + Build.getNameForInt(Build.CURRENT_VERSION) + "), Minimum version " + pluginInfo.getMinimumAPIVersion() + " (" + Build.getNameForInt(pluginInfo.getMinimumAPIVersion()) + ")";
+				if (!getServer().getServerConfiguration().isDeveloperMode()) {
+					warnMessage = warnMessage + " This plugin will be disabled.";
+					pluginInfo = null;
+					return;
+				}
+			}
+
 			IPlugin plugin = (IPlugin) loader.loadClass(pluginInfo.getMain()).newInstance();
 			plugin.init(pluginInfo);
 			plugin.onLoad();

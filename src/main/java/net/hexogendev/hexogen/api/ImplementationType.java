@@ -1,5 +1,5 @@
 package net.hexogendev.hexogen.api;
 
 public enum ImplementationType {
-	STANDALONE(), MODULAR();
+	STANDALONE(), MODULAR(), VANILLA();
 }

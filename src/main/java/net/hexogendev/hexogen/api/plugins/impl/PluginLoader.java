@@ -40,9 +40,10 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 			String main = config.getString("mainClass");
 			String version = config.getString("version");
 			String description = config.getString("description");
+			int minimumAPI = config.getInt("minimumAPIVersion");
 			List<String> depends = config.getStringList("depends");
 			List<String> developers = config.getStringList("developers");
-			IPluginDescription descrption = new PluginDescription(name, main, developers, version, description, depends);
+			IPluginDescription descrption = new PluginDescription(name, main, developers, version, description, minimumAPI, depends);
 
 			Enumeration<JarEntry> entries = pluginJar.entries();
 			while (entries.hasMoreElements()) {
@@ -78,7 +79,7 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 	}
 
 	private void extracted(String pluginPath) throws InvalidPluginException {
-		throw new InvalidPluginException("\"plugin.json\" not found in \"" + pluginPath + "\"");
+		throw new InvalidPluginException("\"plugin.yml\" not found in \"" + pluginPath + "\"");
 	}
 
 	private boolean isClass(String className) {
