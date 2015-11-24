@@ -6,6 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import net.hexogendev.hexogen.api.Hexogen;
 import net.hexogendev.hexogen.api.command.ICommand;
 import net.hexogendev.hexogen.api.command.ICommandSender;
+import net.hexogendev.hexogen.api.lang.LanguagePath;
 import net.hexogendev.hexogen.api.utils.chatReplacer.ReplacerManager;
 
 public class InfoCommand implements ICommand {
@@ -25,7 +26,7 @@ public class InfoCommand implements ICommand {
 		// for (String message : list) {
 		// sender.sendMessage(message);
 		// }
-		String text = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("system.aboutServer");
+		String text = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue(LanguagePath.COMMANDS.INFO.ABOUT_SERVER);
 		text = ReplacerManager.replace(text, sender);
 		sender.sendMessage(text);
 	}
@@ -37,7 +38,8 @@ public class InfoCommand implements ICommand {
 
 	@Override
 	public String getDescription() {
-		return "About server core.";
+		// return "About server core.";
+		return LanguagePath.COMMANDS.INFO.DESCRIPTION;
 	}
 
 	@Override

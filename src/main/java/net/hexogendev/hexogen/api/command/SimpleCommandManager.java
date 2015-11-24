@@ -8,6 +8,7 @@ import net.hexogendev.hexogen.api.Server;
 import net.hexogendev.hexogen.api.command.defaultcmd.InfoCommand;
 import net.hexogendev.hexogen.api.command.defaultcmd.PluginsCommand;
 import net.hexogendev.hexogen.api.command.defaultcmd.ShutdownCommand;
+import net.hexogendev.hexogen.api.lang.LanguagePath;
 
 public class SimpleCommandManager implements ICommandManager {
 
@@ -54,7 +55,7 @@ public class SimpleCommandManager implements ICommandManager {
 		ICommand command = getCommand(label);
 		if (command == null) {
 			// String text = "Unknown command. Type /help for help.";
-			String text = getServer().getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("cw.unknownCommand");
+			String text = getServer().getLanguageManager().getLanguageFile(sender.getLangCode()).getValue(LanguagePath.COMMANDS.UNKNOWN_COMMAND);
 			sender.sendMessage(text);
 			return;
 		}

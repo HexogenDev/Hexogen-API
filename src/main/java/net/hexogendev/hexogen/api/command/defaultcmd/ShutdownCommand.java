@@ -5,6 +5,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import net.hexogendev.hexogen.api.command.ICommand;
 import net.hexogendev.hexogen.api.command.ICommandSender;
+import net.hexogendev.hexogen.api.lang.LanguagePath;
 import net.hexogendev.hexogen.api.utils.ChatColor;
 
 public class ShutdownCommand implements ICommand {
@@ -13,7 +14,7 @@ public class ShutdownCommand implements ICommand {
 
 	@Override
 	public void execute(ICommandSender sender, String[] args) {
-		String text = sender.getServer().getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("system.shutdown");
+		String text = sender.getServer().getLanguageManager().getLanguageFile(sender.getLangCode()).getValue(LanguagePath.MESSAGES.DEFAULT_SHUTDOWN_MESSAGE);
 		if (args.length >= 1) {
 			if (args[0] != null) {
 				text = args[0];
@@ -30,7 +31,8 @@ public class ShutdownCommand implements ICommand {
 
 	@Override
 	public String getDescription() {
-		return "Shutdown this server";
+		// return "Shutdown this server";
+		return LanguagePath.COMMANDS.SHUTDOWN.DESCRIPTION;
 	}
 
 	@Override

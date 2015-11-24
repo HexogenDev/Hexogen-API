@@ -7,6 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import net.hexogendev.hexogen.api.Hexogen;
 import net.hexogendev.hexogen.api.command.ICommand;
 import net.hexogendev.hexogen.api.command.ICommandSender;
+import net.hexogendev.hexogen.api.lang.LanguagePath;
 import net.hexogendev.hexogen.api.plugins.IPlugin;
 import net.hexogendev.hexogen.api.utils.ChatColor;
 
@@ -16,7 +17,7 @@ public class PluginsCommand implements ICommand {
 
 	@Override
 	public void execute(ICommandSender sender, String[] args) {
-		String pluginLang = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue("system.installedPlugins");
+		String pluginLang = Hexogen.getLanguageManager().getLanguageFile(sender.getLangCode()).getValue(LanguagePath.COMMANDS.PLUGINS.INSTALLED_PLUGINS);
 		Collection<IPlugin> pluginList = Hexogen.getPluginManager().getPlugins();
 
 		String msg = ChatColor.AQUA + pluginLang + ChatColor.WHITE + " (" + pluginList.size() + "): ";
@@ -43,7 +44,8 @@ public class PluginsCommand implements ICommand {
 
 	@Override
 	public String getDescription() {
-		return "Get plugin list";
+		// return "Get plugin list";
+		return LanguagePath.COMMANDS.PLUGINS.DESCRIPTION;
 	}
 
 	@Override
