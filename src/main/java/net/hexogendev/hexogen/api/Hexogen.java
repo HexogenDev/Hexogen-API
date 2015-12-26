@@ -2,8 +2,8 @@ package net.hexogendev.hexogen.api;
 
 import org.apache.logging.log4j.Logger;
 
-import net.hexogendev.hexogen.api.command.ConsoleCommandSender;
 import net.hexogendev.hexogen.api.command.ICommandManager;
+import net.hexogendev.hexogen.api.command.ICommandSender;
 import net.hexogendev.hexogen.api.entity.EntityManager;
 import net.hexogendev.hexogen.api.lang.ILanguageManager;
 import net.hexogendev.hexogen.api.management.OperatorsManager;
@@ -184,7 +184,7 @@ public class Hexogen {
 	 * 
 	 * @return
 	 */
-	public static ConsoleCommandSender getConsoleCommandSender() {
+	public static ICommandSender getConsoleCommandSender() {
 		return getServer().getConsoleCommandSender();
 	}
 
@@ -221,5 +221,60 @@ public class Hexogen {
 	 */
 	public StorageManager getStorageManager() {
 		return getServer().getStorageManager();
+	}
+
+	// From Platform
+	/**
+	 * 
+	 * @param manager
+	 */
+	public void setPlayerManager(PlayerManager manager) {
+		getServer().setPlayerManager(manager);
+	}
+
+	/**
+	 * 
+	 * @param netserver
+	 */
+	public void setNetworkServer(NetworkServer netserver) {
+		getServer().setNetworkServer(netserver);
+	}
+
+	/**
+	 * 
+	 * @param manager
+	 */
+	public void setEntityManager(EntityManager manager) {
+		getServer().setEntityManager(manager);
+	}
+
+	/**
+	 * Экстренное выключение сервера
+	 */
+	public void shutdownNow() {
+		getServer().shutdownNow();
+	}
+
+	/**
+	 * 
+	 * @param sender
+	 */
+	public void setConsoleCommandSender(ICommandSender sender) {
+		getServer().setConsoleCommandSender(sender);
+	}
+
+	/**
+	 * 
+	 * @param manager
+	 */
+	public void setWorldManager(WorldManager manager) {
+		getServer().setWorldManager(manager);
+	}
+
+	/**
+	 * 
+	 */
+	public void setScheduler(Scheduler scheduler) {
+		getServer().setScheduler(scheduler);
 	}
 }
