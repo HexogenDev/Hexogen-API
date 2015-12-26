@@ -17,6 +17,10 @@ public class SimpleCommandManager implements ICommandManager {
 
 	public SimpleCommandManager(Server server) {
 		this.server = server;
+	}
+
+	@Override
+	public void initialization() {
 		this.commands = new CopyOnWriteArrayList<ICommand>();
 
 		// reg command
@@ -86,5 +90,4 @@ public class SimpleCommandManager implements ICommandManager {
 	public Server getServer() {
 		return server;
 	}
-
 }

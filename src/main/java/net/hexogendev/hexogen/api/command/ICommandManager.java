@@ -1,8 +1,9 @@
 package net.hexogendev.hexogen.api.command;
 
+import net.hexogendev.hexogen.api.Initializable;
 import net.hexogendev.hexogen.api.Server;
 
-public interface ICommandManager {
+public interface ICommandManager extends Initializable {
 
 	public boolean registerCommand(ICommand command);
 
