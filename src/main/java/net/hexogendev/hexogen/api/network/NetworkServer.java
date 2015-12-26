@@ -1,11 +1,13 @@
 package net.hexogendev.hexogen.api.network;
 
+import net.hexogendev.hexogen.api.Initializable;
 import net.hexogendev.hexogen.api.Server;
+import net.hexogendev.hexogen.api.Shutdownable;
 import net.hexogendev.hexogen.api.entity.alive.player.Player;
 import net.hexogendev.hexogen.api.world.Position;
 import net.hexogendev.hexogen.api.world.World;
 
-public interface NetworkServer {
+public interface NetworkServer extends Initializable, Shutdownable {
 
 	public Server getServer();
 

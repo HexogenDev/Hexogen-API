@@ -2,10 +2,12 @@ package net.hexogendev.hexogen.api.entity;
 
 import java.util.Collection;
 
+import net.hexogendev.hexogen.api.Initializable;
 import net.hexogendev.hexogen.api.Server;
+import net.hexogendev.hexogen.api.Shutdownable;
 import net.hexogendev.hexogen.api.world.Position;
 
-public interface EntityManager {
+public interface EntityManager extends Initializable, Shutdownable {
 
 	public Collection<Entity> getAllEntities();
 

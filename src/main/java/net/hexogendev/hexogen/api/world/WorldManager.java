@@ -3,8 +3,9 @@ package net.hexogendev.hexogen.api.world;
 import java.util.List;
 
 import net.hexogendev.hexogen.api.Server;
+import net.hexogendev.hexogen.api.Shutdownable;
 
-public interface WorldManager {
+public interface WorldManager extends Shutdownable {
 
 	public Server getServer();
 

@@ -1,8 +1,10 @@
 package net.hexogendev.hexogen.api.scheduler;
 
+import net.hexogendev.hexogen.api.Initializable;
 import net.hexogendev.hexogen.api.Server;
+import net.hexogendev.hexogen.api.Shutdownable;
 
-public interface Scheduler {
+public interface Scheduler extends Initializable, Shutdownable {
 
 	public void shutdown();
 
