@@ -16,5 +16,5 @@ public interface IPluginDescription {
 
 	public String getMain();
 
-	public int getMinimumAPIVersion();
+	public int getMinimumAPI();
 }

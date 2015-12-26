@@ -55,7 +55,7 @@ public class PluginDescription implements IPluginDescription {
 	}
 
 	@Override
-	public int getMinimumAPIVersion() {
+	public int getMinimumAPI() {
 		return minimumAPI;
 	}
 }

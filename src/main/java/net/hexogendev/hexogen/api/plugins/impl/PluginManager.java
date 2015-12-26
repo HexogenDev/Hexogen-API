@@ -79,14 +79,26 @@ public class PluginManager implements IPluginManager {
 			IPluginDescription pluginInfo = loader.loadPlugin(moduleFolder.getPath() + File.separator + JarFileName);
 
 			// Check minimum version of API
-			String warnMessage = "Warning! ";
-			if (pluginInfo.getMinimumAPIVersion() > Build.CURRENT_VERSION) {
-				warnMessage = warnMessage + "Your API level does not meet the minimum level to run this plugin. Your API version " + Build.CURRENT_VERSION + " (" + Build.getNameForInt(Build.CURRENT_VERSION) + "), Minimum version " + pluginInfo.getMinimumAPIVersion() + " (" + Build.getNameForInt(pluginInfo.getMinimumAPIVersion()) + ")";
+			boolean disable = false;
+			String message = "Warning! ";
+			if (pluginInfo.getMinimumAPI() > Build.CURRENT_VERSION) {
+				message = message + "Your API level does not meet the minimum level to run this plugin! Your API version " + Build.CURRENT_VERSION + " (" + Build.getNameForInt(Build.CURRENT_VERSION) + "), Minimum version " + pluginInfo.getMinimumAPI() + " (" + Build.getNameForInt(pluginInfo.getMinimumAPI()) + ")";
 				if (!getServer().getServerConfiguration().isDeveloperMode()) {
-					warnMessage = warnMessage + " This plugin will be disabled.";
-					pluginInfo = null;
-					return;
+					disable = true;
 				}
+			} else if (pluginInfo.getMinimumAPI() == Build.VERSION_CODES.UNKNOWN) {
+				message = message + "Minimum version of API to run plugin is UNKNOWN!";
+				if (!getServer().getServerConfiguration().isDeveloperMode()) {
+					disable = true;
+				}
+			}
+
+			getServer().getLogger().info(message);
+			if (disable) {
+				String disableMessage = "This plugin will be disabled.";
+				getServer().getLogger().info(disableMessage);
+				pluginInfo = null;
+				return;
 			}
 
 			IPlugin plugin = (IPlugin) loader.loadClass(pluginInfo.getMain()).newInstance();

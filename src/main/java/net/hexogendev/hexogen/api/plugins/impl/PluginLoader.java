@@ -40,7 +40,7 @@ public class PluginLoader extends ClassLoader implements IPluginLoader {
 			String main = config.getString("mainClass");
 			String version = config.getString("version");
 			String description = config.getString("description");
-			int minimumAPI = config.getInt("minimumAPIVersion");
+			int minimumAPI = config.getInt("minimumAPI");
 			List<String> depends = config.getStringList("depends");
 			List<String> developers = config.getStringList("developers");
 			IPluginDescription descrption = new PluginDescription(name, main, developers, version, description, minimumAPI, depends);
