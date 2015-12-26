@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import net.hexogendev.hexogen.api.Server;
+import net.hexogendev.hexogen.api.Tickable;
 import net.hexogendev.hexogen.api.command.ICommandSender;
 import net.hexogendev.hexogen.api.entity.controllers.EntityMoveController;
 import net.hexogendev.hexogen.api.network.IPacket;
@@ -13,7 +14,7 @@ import net.hexogendev.hexogen.api.world.Position;
 import net.hexogendev.hexogen.api.world.World;
 import net.hexogendev.hexogen.api.world.chunk.Chunk;
 
-public interface Entity extends ICommandSender {
+public interface Entity extends ICommandSender, Tickable {
 
 	public EntityTrackerEntry getTrackerEntry();
 
@@ -54,8 +55,6 @@ public interface Entity extends ICommandSender {
 	public boolean isInvisible();
 
 	public boolean onGround();
-
-	public void onTick();
 
 	public void setInvisible(boolean flag);
 
